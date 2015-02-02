@@ -2,10 +2,12 @@
   "cat": [
     "contacte",
     "cooperacio_internacional",
+    "error",
     "immigracio_accio_social",
     "la_fundacio",
     "membres_patronat",
     "memoria_activitats",
+    "menu",
     "projectes",
     "que_pots_fer_tu",
     "qui_som",
@@ -40,8 +42,5 @@
     "que_puedes_hacer_tu",
     "quienes_somos",
     "voluntarios"
-  ],
-  "routes.json": [
-    null
   ]
 }
