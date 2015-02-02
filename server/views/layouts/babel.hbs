@@ -1,0 +1,22 @@
+<html>
+  <header></header>
+  <body>
+    <h1>Fundación Babel Punto de Encuentro</h1>
+      {{#if isEs}}
+        {{> es/menu}}
+      {{/if}}
+      {{#if isCat}}
+        {{> cat/menu}}
+      {{/if}}
+      {{#if isEn}}
+        {{> en/menu}}
+      {{/if}}
+    <div>
+      {{{body}}}
+    </div>
+  </body>
+  <footer>
+    Copyright (c) 2015
+  </footer>
+</html>
+

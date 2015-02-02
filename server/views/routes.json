@@ -1,0 +1,47 @@
+{
+  "cat": [
+    "contacte",
+    "cooperacio_internacional",
+    "immigracio_accio_social",
+    "la_fundacio",
+    "membres_patronat",
+    "memoria_activitats",
+    "projectes",
+    "que_pots_fer_tu",
+    "qui_som",
+    "voluntaris"
+  ],
+  "en": [
+    "contact",
+    "error",
+    "immigrations_social_coop",
+    "index",
+    "international_coop",
+    "menu",
+    "past_activities",
+    "projects",
+    "volunteers",
+    "what_can_you_do",
+    "what_we_do",
+    "who_are_we"
+  ],
+  "es": [
+    "contacto",
+    "cooperacion_internacional",
+    "error",
+    "fundacion_babel_pde",
+    "index",
+    "memoria_actividades",
+    "menu",
+    "miembros_patronato",
+    "migracion_accion_social",
+    "proyectos",
+    "que_hacemos",
+    "que_puedes_hacer_tu",
+    "quienes_somos",
+    "voluntarios"
+  ],
+  "routes.json": [
+    null
+  ]
+}

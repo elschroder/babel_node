@@ -1,0 +1,21 @@
+{
+  "name": "babel_node",
+  "version": "0.0.1",
+  "description": "new babelpde website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "1.7.x",
+    "config": "^1.0.0",
+    "express-handlebars": "^1.1.0",
+    "express": "^4.11.1",
+    "grunt": "0.4.5",
+    "hbs": "~2.7.0",
+    "lodash": "^2.4.1"
+    
+  }
+}
