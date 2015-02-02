@@ -6,7 +6,6 @@ app = express()
 env = process.env.NODE_ENV || 'development'
 port = process.env.PORT || 5200
 
-console.log "grunt task k cria as routes possiveis definidas pelo filesystem"
 exphbsConf = exphbs.create(
   #helpers: hbshelpers
   extname: '.hbs', 

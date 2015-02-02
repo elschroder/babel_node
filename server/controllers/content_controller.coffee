@@ -17,3 +17,6 @@ module.exports.get = (req, res) ->
   else
     res.render("#{language}/error", opts)
     
+module.exports.index = (req, res) ->
+  opts =  {layout: 'babel', isEs: true}
+  res.render("es/index", opts)
