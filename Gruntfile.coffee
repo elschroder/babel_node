@@ -4,4 +4,4 @@ module.exports = (grunt) ->
   )
   grunt.loadTasks('tasks')
   #grunt.registerTask('build', ['bower:install','clean','concat','copy','mince'])  
-  #grunt.registerTask('default', ['bower:install'])
+  grunt.registerTask('default', ['bower:install'])
