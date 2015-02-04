@@ -1,6 +1,6 @@
 express = require 'express'
 exphbs = require 'express-handlebars'
-
+config = require 'config'
 app = express()
 
 env = process.env.NODE_ENV || 'development'
@@ -32,6 +32,7 @@ process.on('SIGTERM', ->
     process.exit(0)
   )
 )
+
 
 console.log "passar isto pro middleware."
 require("./routes")(app)

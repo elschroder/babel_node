@@ -21,4 +21,4 @@ public/assets
 cache
 bower_components
 *.sql
-jobs_export.json
+tumblr.json
