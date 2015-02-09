@@ -2,7 +2,7 @@ _ = require 'lodash'
 LanguageId = require '../helpers/language'
 routes = require '../views/routes'
 config = require 'config'
-{Blog, User} = require 'tumblr'
+Tumblr = require '../models/tumblr'
 
 module.exports.get = (req, res) ->
   opts =  {layout: 'babel'}
@@ -11,39 +11,20 @@ module.exports.get = (req, res) ->
   language = 'es' unless language
   content = req.params.content
   content = 'index' unless content
-
+  
   _.extend(opts, LanguageId(language))
   
   if _.contains(routes[language], content)
-    res.render("#{language}/#{content}", opts)
+    template = "#{language}/#{content}"
   else
-    res.render("#{language}/error", opts)
+    template = "#{language}/error"
     
-module.exports.index = (req, res) ->
-  #######  tumblr test
-
-  oauth = config.tumblr
-    #token: 'OAuth Access Token'
-    #token_secret: 'OAuth Access Token Secret'
-
-  blog = new Blog 'babelpde.tumblr.com', oauth
-
-  blog.photo limit: 10, (error, response) ->
-    throw new Error error if error
-    #console.log error if error
-    console.log response.posts[0].photos[0].original_size.url
-    _.each(response.posts, (post)->
-      _.extend(post, {new_image: response.posts[0].photos[0].original_size.url})
+  if content == 'index' && !(template.match('error'))
+    Tumblr.get(config.news.limit, (err, posts) ->
+      _.extend(opts, {tumblr_posts: posts})
+      res.render(template, opts)    
     )
-    opts =  {layout: 'babel', isEs: true, tumblr_posts: response.posts}
-    res.render("es/index", opts)
-    
-  #user = new User oauth
-
-  #user.info (error, response) ->
-  #  throw new Error error if error
-  #  console.log response.user
-
-  #######
+  else
+    res.render(template, opts)
   
   
