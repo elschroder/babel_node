@@ -17,6 +17,7 @@ app.engine('.hbs', exphbsConf.engine)
 app.set 'views', "#{__dirname}/views/"
 app.set 'view engine', '.hbs' 
 
+app.use '/assets', express.static("client/assets", {maxAge: 31536000 * 1000}) #cache for 1 year
 
 server = app.listen port, ->
   console.log "Listening on #{port}"
