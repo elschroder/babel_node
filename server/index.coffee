@@ -4,7 +4,7 @@ config = require 'config'
 app = express()
 
 env = process.env.NODE_ENV || 'development'
-port = process.env.PORT || 5200
+port = process.env.PORT || 6100
 
 exphbsConf = exphbs.create(
   #helpers: hbshelpers
