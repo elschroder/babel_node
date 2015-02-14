@@ -1,12 +1,12 @@
 _ = require 'lodash'
-LanguageId = require '../helpers/language'
-routes = require '../views/routes'
 config = require 'config'
+routes = config.routes
+
+LanguageId = require '../helpers/language'
 Tumblr = require '../models/tumblr'
 
 module.exports.get = (req, res) ->
   opts =  {layout: 'babel'}
-  console.log "config", config
   language = req.params.language
   language = 'es' unless language
   content = req.params.content

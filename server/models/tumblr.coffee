@@ -1,12 +1,11 @@
-_ = require 'lodash'
-config = require 'config'
+tumblr = (require 'config').tumblr
 {Blog, User} = require 'tumblr'
 
 module.exports.get = (limit, cb) ->
   opts = {limit: limit}
   
-  blog = new Blog 'babelpde.tumblr.com', config.tumblr.oauth
-  blog.posts( opts , (error, response) ->
-    cb(error) if error
-    cb(null, response.posts)
-  )
+  new Blog(tumblr.blog, tumblr.oauth)
+    .posts(opts , (error, response) ->
+      cb(error) if error
+      cb(null, response.posts)
+    )
