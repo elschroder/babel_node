@@ -1,8 +1,9 @@
 tumblr = (require 'config').tumblr
 {Blog, User} = require 'tumblr'
 
-module.exports.get = (limit, cb) ->
-  opts = {limit: limit}
+module.exports.get = (limit=null, cb) ->
+  opts = {} 
+  opts.limit = limit if limit
   
   new Blog(tumblr.blog, tumblr.oauth)
     .posts(opts , (error, response) ->

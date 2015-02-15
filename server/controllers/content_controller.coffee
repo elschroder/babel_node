@@ -18,9 +18,11 @@ module.exports.get = (req, res) ->
     template = "#{language}/#{content}"
   else
     template = "#{language}/error"
-    
-  if content == 'index' && !(template.match('error'))
-    Tumblr.get(config.news.limit, (err, posts) ->
+  
+  postLimit = config.news.limit unless content == 'news' ||   content == 'noticias' ||  content == 'noticies'
+      
+  if (content == 'index' || content == 'news' ||   content == 'noticias' ||  content == 'noticies') && !(template.match('error'))
+    Tumblr.get(postLimit, (err, posts) ->
       _.extend(opts, {tumblr_posts: posts})
       res.render(template, opts)    
     )
