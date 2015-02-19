@@ -1,28 +1,76 @@
-<html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<style>
+.jumbotron {
+  margin-bottom:0;
+  background-color: #ee5b13;
+  
+}
+.visible-md-block, .visible-lg-block  {
+  color:white;
+}
+</style>
+<html class='container-fluid'>
   <header></header>
-  <body>
+  <body >
+    
+    <div class='container-fluid'>
     {{> common/language_picker}}
-    <h1>Fundación Babel Punto de Encuentro</h1>
-      {{#if isEs}}
-        {{> es/menu}}
-      {{/if}}
-      {{#if isCat}}
-        {{> cat/menu}}
-      {{/if}}
-      {{#if isEn}}
-        {{> en/menu}}
-      {{/if}}
-    <div>
-      {{{body}}}
+    
+      <div class='jumbotron'>
+        <img class='hidden-xs hidden-sm visible-md-block visible-lg-block' src='/assets/logo-bw-inverted.png'  width="15%">
+        <img class='visible-sm-block ' src='/assets/logo-bw-inverted.png'  width="35%">
+        <img class='visible-xs-block ' src='/assets/logo-bw-inverted.png'  width="45%">
+        <h2 class='visible-md-block'>Fundación Babel Punto de Encuentro</h2>      
+        <h3 class='visible-lg-block'>Fundación Babel Punto de Encuentro</h3>      
+      </div>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <ul class="nav navbar-nav">
+            {{#if isEs}}
+              {{> es/menu}}
+            {{/if}}
+            {{#if isCat}}
+              {{> cat/menu}}
+            {{/if}}
+            {{#if isEn}}
+              {{> en/menu}}
+            {{/if}}
+            </ul>
+          </div>
+        </div>
+      </nav>
+            
+    </div>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-xs-12 col-md-8'>
+          {{{body}}}
+        </div>
+        <div class='col-xs-12 col-md-4'>
+          <iframe allowtransparency="true" frameborder="0" height="430" scrolling="no" src="http://www.migranodearena.org/widget.php?q=aWRtPTEmY3JldG89NTY0OA==" width="250">No iframes supported</iframe>
+        </div>
+      </div>
+    </div>
+    <div class='container-fluid'>
+      <div class='row'>      
+        {{> common/sponsors}}
+      </div>
     </div>
   </body>
-  <div>
-    <iframe allowtransparency="true" frameborder="0" height="430" scrolling="no" src="http://www.migranodearena.org/widget.php?q=aWRtPTEmY3JldG89NTY0OA==" width="250">No iframes supported</iframe>
-  </div>
-  {{> common/sponsors}}
+  
+    
   {{> common/ga}}
   <footer>
     Copyright © 2015
   </footer>
 </html>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

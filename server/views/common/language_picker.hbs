@@ -1,14 +1,20 @@
-<ul>
-  {{#if isEs}}
-    <li><a href="/content/cat/">CAT</a></li>
-    <li><a href="/content/en/">EN</a></li>        
-  {{/if}}
-  {{#if isCat}}
-    <li><a href="/content/en/">EN</a></li>
-    <li><a href="/content/es/">ES</a></li>        
-  {{/if}}
-  {{#if isEn}}
-    <li><a href="/content/cat/">CAT</a></li>
-    <li><a href="/content/es/">ES</a></li>        
-  {{/if}}
-</ul>
+<div class="container-fluid">
+  <nav class='navbar navbar-nav navbar-right'>
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+        {{#if isEs}}
+          <li><a class='text-right' href="/content/cat/">CAT</a></li>
+          <li><a class='text-right' href="/content/en/">EN</a></li>        
+        {{/if}}
+        {{#if isCat}}
+          <li><a class='text-right' href="/content/en/">EN</a></li>
+          <li><a class='text-right' href="/content/es/">ES</a></li>        
+        {{/if}}
+        {{#if isEn}}
+          <li><a class='text-right' href="/content/cat/">CAT</a></li>
+          <li><a class='text-right' href="/content/es/">ES</a></li>        
+        {{/if}}
+        </ul>
+      </div>
+  </nav>
+</div>
