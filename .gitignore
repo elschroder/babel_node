@@ -5,7 +5,6 @@ node_modules
 *.iml
 log/*.log
 log/*
-client/assets/*
 pids/*
 socks/*
 REVISION
