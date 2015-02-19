@@ -1,4 +1,3 @@
-dev_credentials = require '../tumblr.json'
 routes = require './routes.json'
 
 module.exports =
