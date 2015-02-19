@@ -1,7 +1,7 @@
 _ = require 'lodash'
 config = require 'config'
 routes = config.routes
-
+imagesHelper = require '../helpers/images'
 LanguageId = require '../helpers/language'
 Tumblr = require '../models/tumblr'
 
@@ -23,19 +23,12 @@ module.exports.get = (req, res) ->
       
   if (content == 'index' || content == 'news' ||   content == 'noticias' ||  content == 'noticies') && !(template.match('error')) && config.tumblr.on
     Tumblr.get(postLimit, (err, posts) ->
-      console.log "err",err if err
+      console.log "error", err if err
       if posts?.length > 0
-        addResponsiveImg(posts) 
-        console.log "posts",posts
-        
+        imagesHelper.addResponsiveImg(posts)         
         _.extend(opts, {tumblr_posts: posts})
       res.render(template, opts)    
     )
   else
     res.render(template, opts)
   
-addResponsiveImg = (posts) ->
-  _.each(posts, (post) ->
-    if post.body
-      post.body = post.body.replace(/\<img src/g, "<img class='img-responsive' src")
-  )
