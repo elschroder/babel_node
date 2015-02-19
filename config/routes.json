@@ -12,12 +12,12 @@
     "noticies",
     "projectes",
     "que_pots_fer_tu",
-    "qui_som",
     "voluntaris"
   ],
   "en": [
     "contact",
     "error",
+    "foundation",
     "immigration_social_coop",
     "index",
     "international_coop",
@@ -27,8 +27,7 @@
     "projects",
     "volunteers",
     "what_can_you_do",
-    "what_we_do",
-    "who_are_we"
+    "what_we_do"
   ],
   "es": [
     "contacto",
@@ -44,7 +43,6 @@
     "proyectos",
     "que_hacemos",
     "que_puedes_hacer_tu",
-    "quienes_somos",
     "voluntarios"
   ]
 }

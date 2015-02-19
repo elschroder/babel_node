@@ -23,7 +23,8 @@ module.exports.get = (req, res) ->
       
   if (content == 'index' || content == 'news' ||   content == 'noticias' ||  content == 'noticies') && !(template.match('error'))
     Tumblr.get(postLimit, (err, posts) ->
-      if posts.length > 0
+      console.log "err",err if err
+      if posts?.length > 0
         addResponsiveImg(posts) 
         console.log "posts",posts
         

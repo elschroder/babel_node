@@ -3,6 +3,8 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <style>
@@ -14,7 +16,9 @@
 .visible-md-block, .visible-lg-block  {
   color:white;
 }
+
 </style>
+
 <html class='container-fluid'>
   <header></header>
   <body >
@@ -32,21 +36,30 @@
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <ul class="nav navbar-nav">
-            {{#if isEs}}
-              {{> es/menu}}
-            {{/if}}
-            {{#if isCat}}
-              {{> cat/menu}}
-            {{/if}}
-            {{#if isEn}}
-              {{> en/menu}}
-            {{/if}}
-            </ul>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id='bs-example-navbar-collapse-2' >
+            <div class="navbar-header">
+              <ul class="nav navbar-nav">
+              {{#if isEs}}
+                {{> es/menu}}
+              {{/if}}
+              {{#if isCat}}
+                {{> cat/menu}}
+              {{/if}}
+              {{#if isEn}}
+                {{> en/menu}}
+              {{/if}}
+              </ul>
+            </div>
           </div>
         </div>
-      </nav>
-            
+      </nav>        
     </div>
     <div class='container-fluid'>
       <div class='row'>
@@ -68,9 +81,12 @@
     
   {{> common/ga}}
   <footer>
-    Copyright © 2015
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-centered">
+          <li><a href="#">Copyright © 2015, Fundación Babel Punto de Encuentro</a></li>
+        </ul>
+      </div>
+    </nav>
   </footer>
 </html>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
