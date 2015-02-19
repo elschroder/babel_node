@@ -21,7 +21,7 @@ module.exports.get = (req, res) ->
   
   postLimit = config.news.limit unless content == 'news' ||   content == 'noticias' ||  content == 'noticies'
       
-  if (content == 'index' || content == 'news' ||   content == 'noticias' ||  content == 'noticies') && !(template.match('error'))
+  if (content == 'index' || content == 'news' ||   content == 'noticias' ||  content == 'noticies') && !(template.match('error')) && config.tumblr.on
     Tumblr.get(postLimit, (err, posts) ->
       console.log "err",err if err
       if posts?.length > 0
