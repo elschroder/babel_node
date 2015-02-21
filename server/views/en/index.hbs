@@ -1,2 +1,6 @@
 <title> Babel Punto de Encuentro Foundation </title>
-{{> common/tumblr/list}}
+{{#if tumblr_on}}
+  {{> common/tumblr/list}}
+{{else}}
+  {{> en/foundation}}
+{{/if}}

@@ -1,7 +1,8 @@
-
+{{#if tumblr_posts}}
 <h1>{{#if isEn}}News{{/if}}{{#if isEs}}Noticias{{/if}}{{#if isCat}}Noticies{{/if}}</h1>
 <div>
 {{#each tumblr_posts}}
   {{> common/tumblr/item}}
 {{/each}}
 </div>
+{{/if}}

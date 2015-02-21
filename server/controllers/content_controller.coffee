@@ -5,8 +5,10 @@ imagesHelper = require '../helpers/images'
 LanguageId = require '../helpers/language'
 Tumblr = require '../models/tumblr'
 
+newsTemplates = ['news','noticias','noticies']
+
 module.exports.get = (req, res) ->
-  opts =  {layout: 'babel'}
+  opts =  {layout: 'babel', tumblr_on: config.tumblr.on}
   language = req.params.language
   language = 'es' unless language
   content = req.params.content
@@ -19,15 +21,18 @@ module.exports.get = (req, res) ->
   else
     template = "#{language}/error"
   
-  postLimit = config.news.limit unless content == 'news' ||   content == 'noticias' ||  content == 'noticies'
-      
-  if (content == 'index' || content == 'news' ||   content == 'noticias' ||  content == 'noticies') && !(template.match('error')) && config.tumblr.on
+  if _.contains(_.union(newsTemplates, ['index']), content) && !(template.match('error')) && config.tumblr.on
+    
+    postLimit = config.news.limit unless _.contains(newsTemplates, content)
+
     Tumblr.get(postLimit, (err, posts) ->
-      console.log "error", err if err
-      if posts?.length > 0
+      if err
+        opts.tumblr_on = false
+      if posts
+        opts.tumblr_on = false if posts?.length < 1
         imagesHelper.addResponsiveImg(posts)         
         _.extend(opts, {tumblr_posts: posts})
-      res.render(template, opts)    
+      res.render(template, opts)      
     )
   else
     res.render(template, opts)
