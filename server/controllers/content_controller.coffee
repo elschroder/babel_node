@@ -1,25 +1,26 @@
 _ = require 'lodash'
 config = require 'config'
 routes = config.routes
+allowedLanguages = config.allowed_languages
+newsTemplates = config.news.templates
 imagesHelper = require '../helpers/images'
 LanguageId = require '../helpers/language'
 Tumblr = require '../models/tumblr'
 
-newsTemplates = ['news','noticias','noticies']
-
 module.exports.get = (req, res) ->
-  opts =  {layout: 'babel', tumblr_on: config.tumblr.on}
+  opts =  {layout: config.layout, tumblr_on: config.tumblr.on}
   language = req.params.language
   language = 'es' unless language
   content = req.params.content
   content = 'index' unless content
   
-  _.extend(opts, LanguageId(language))
-  
   if _.contains(routes[language], content)
     template = "#{language}/#{content}"
   else
+    language = 'es' unless _.contains(allowedLanguages,language)
     template = "#{language}/error"
+  
+  _.extend(opts, LanguageId(language))
   
   if _.contains(_.union(newsTemplates, ['index']), content) && !(template.match('error')) && config.tumblr.on
     
@@ -36,4 +37,3 @@ module.exports.get = (req, res) ->
     )
   else
     res.render(template, opts)
-  

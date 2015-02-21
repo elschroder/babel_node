@@ -1,6 +1,7 @@
 routes = require './routes.json'
 
 module.exports =
+  allowed_languages : ['es','en','cat']
   tumblr:
     on: if process.env.tumblr_on then process.env.tumblr_on == "true" else true
     oauth: 
@@ -9,4 +10,6 @@ module.exports =
     blog: 'babelpde.tumblr.com'
   news:
     limit: 10
+    templates: ['news','noticias','noticies']
   routes: routes
+  layout: 'babel'
