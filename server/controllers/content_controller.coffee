@@ -9,6 +9,7 @@ Tumblr = require '../models/tumblr'
 
 module.exports.get = (req, res) ->
   opts =  {layout: config.layout, tumblr_on: config.tumblr.on}
+  
   language = req.params.language
   language = 'es' unless language
   content = req.params.content

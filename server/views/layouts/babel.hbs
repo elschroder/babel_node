@@ -18,15 +18,18 @@
 }
 
 </style>
+
 <html class='container-fluid'>
   <header></header>
   <body>
     <div class='container-fluid'>
     {{> common/language_picker}}
-      <div class='jumbotron'>
-        <img class='hidden-xs hidden-sm visible-md-block visible-lg-block' src='/assets/logo-bw-inverted.png'  width="15%">
-        <img class='visible-sm-block ' src='/assets/logo-bw-inverted.png'  width="35%">
-        <img class='visible-xs-block ' src='/assets/logo-bw-inverted.png'  width="45%">
+      <div class='jumbotron'>{{#if isEs}}
+        <a href="/content/es">{{/if}}{{#if isCat}}<a href="/content/cat">{{/if}}{{#if isEn}}<a href="/content/en">{{/if}}
+            <img class='hidden-xs hidden-sm visible-md-block visible-lg-block' src='/assets/logo-bw-inverted.png'  width="15%">
+            <img class='visible-sm-block ' src='/assets/logo-bw-inverted.png'  width="35%">
+            <img class='visible-xs-block ' src='/assets/logo-bw-inverted.png'  width="45%">
+        </a>
         <h2 class='visible-md-block'>Fundación Babel Punto de Encuentro</h2>      
         <h3 class='visible-lg-block'>Fundación Babel Punto de Encuentro</h3>      
       </div>
@@ -41,7 +44,7 @@
             </button>
           </div>
           <div class="collapse navbar-collapse" id='bs-example-navbar-collapse-2' >
-            <div class="navbar-header">
+            <div class="navbar-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <ul class="nav navbar-nav">
                 {{#if isEs}}{{> es/menu}}{{/if}}{{#if isCat}}{{> cat/menu}}{{/if}}{{#if isEn}}{{> en/menu}}{{/if}}
               </ul>
@@ -58,11 +61,34 @@
         <div class='col-xs-12 col-md-4'>
           <iframe allowtransparency="true" frameborder="0" height="430" scrolling="no" src="http://www.migranodearena.org/widget.php?q=aWRtPTEmY3JldG89NTY0OA==" width="250">No iframes supported</iframe>
         </div>
+        
       </div>
     </div>
     <div class='container-fluid'>
       <div class='row'>      
         {{> common/sponsors}}
+      </div>
+      <div class='col-xs-12 col-md-12'>
+        <div class='col-xs-12 col-sm-4'>
+          <h4>Dirección:</h4>
+          <address>
+            C/ del Mare de Deu del Pilar, 15 principal, 
+            08003 Barcelona<br>
+            {{#if isEs}}<strong>Estación de Metro</strong>:{{/if}}{{#if isCat}}<strong>Estació de Metro</strong>:{{/if}}{{#if isEn}}<strong>Metro</strong>: {{/if}}
+            Urquinaona (<strong>L1</strong>, <strong>L4</strong>)
+          </address>
+        </div>
+        <div class='col-xs-12 col-sm-4'>
+          <h4>Teléfonos:</h4>
+          <address>
+          93 295 57 93 /
+          629 577 430
+          </address>  
+        </div>
+        <div class='col-xs-12 col-sm-4'>
+          <h4>E-mail:</h4>
+          <address>info@babelpuntodeencuentro.org</address>
+        </div>
       </div>
     </div>
   </body>
@@ -75,5 +101,6 @@
         </ul>
       </div>
     </nav>
+    
   </footer>
 </html>
