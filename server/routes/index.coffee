@@ -5,10 +5,10 @@ module.exports = (app) ->
   app.route '/'
     .get contentController.get
   
-  app.route "/content/:language"
+  app.route "/:language"
     .get contentController.get
     
-  app.route "/content/:language/:content"
+  app.route "/:language/:content"
     .get contentController.get
   
   
