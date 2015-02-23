@@ -32,7 +32,11 @@ module.exports.get = (req, res) ->
         opts.tumblr_on = false
       if posts
         opts.tumblr_on = false if posts?.length < 1
-        imagesHelper.addResponsiveImg(posts)         
+        imagesHelper.addResponsiveImg(posts)
+        #move this to some helper
+        _.map(posts, (post) ->
+          _.extend(post, LanguageId(language) )
+        )
         _.extend(opts, {tumblr_posts: posts})
       res.render(template, opts)      
     )

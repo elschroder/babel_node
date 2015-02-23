@@ -1,20 +1,19 @@
 {{#if isPhoto}}
-<h1> Photo <h1>
   <h2>{{title}}</h2>
   <div>{{{caption}}}</div>
+  <div>
   {{#each photos}}
-    <h3>ha fotos h3 title</h3>
-    <div><img class='img-responsive' src={{original_size.url}}></div>
+    <img class='img-responsive' src={{original_size.url}}>
   {{/each}}
-  
+  </div>
 {{/if}}
 {{#if isText}}
-<h1> Text <h1>
   <h2>{{title}}</h2>
   <div>{{{body}}}</div>
-  <hr>
 {{/if}}
-  <em>{{date}} {{timestamp}}</em>
+<hr>
+  <em>{{#if isEs}}publicado: {{/if}}{{#if isCat}}publicat: {{/if}}{{#if isEn}}published: {{/if}}
+  {{date}}</em>
 <hr>
 
 
