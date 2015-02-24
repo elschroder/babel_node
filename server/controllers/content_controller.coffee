@@ -8,7 +8,7 @@ LanguageId = require '../helpers/language'
 Tumblr = require '../models/tumblr'
 
 module.exports.get = (req, res) ->
-  opts =  {layout: config.layout, tumblr_on: config.tumblr.on}
+  opts =  {layout: config.layout, tumblr_on: config.tumblr.on, locals: res.locals}
   
   language = req.params.language
   language = 'es' unless language
