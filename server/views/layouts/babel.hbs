@@ -23,35 +23,9 @@
   <header></header>
   <body>
     <div class='container-fluid'>
-    {{> common/language_picker}}
-      <div class='jumbotron'>{{#if isEs}}
-        <a href="/es">{{/if}}{{#if isCat}}<a href="/cat">{{/if}}{{#if isEn}}<a href="/en">{{/if}}
-            <img class='hidden-xs hidden-sm visible-md-block visible-lg-block' src='/assets/logo-bw-inverted.png'  width="15%">
-            <img class='visible-sm-block ' src='/assets/logo-bw-inverted.png'  width="35%">
-            <img class='visible-xs-block ' src='/assets/logo-bw-inverted.png'  width="45%">
-        </a>
-        <h2 class='visible-md-block'>Fundación Babel Punto de Encuentro</h2>      
-        <h3 class='visible-lg-block'>Fundación Babel Punto de Encuentro</h3>      
-      </div>
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id='bs-example-navbar-collapse-2' >
-            <div class="navbar-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <ul class="nav navbar-nav">
-                {{#if isEs}}{{> es/menu}}{{/if}}{{#if isCat}}{{> cat/menu}}{{/if}}{{#if isEn}}{{> en/menu}}{{/if}}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>        
+      {{> common/language_picker}}
+      {{> common/dynamic_logo}}
+      {{> common/navigation_bar}}
     </div>
     <div class='container-fluid'>
       <div class='row'>
@@ -59,52 +33,7 @@
           {{{body}}}
         </div>
         <div class='container-fluid'>
-          <div class='col-xs-12 col-md-4'>
-            <div class='col-xs-12  col-md-offset-4 col-md-7'>
-                <hr>
-                <h4>
-                  {{#if isEs}} Visita-nos en:{{/if}}
-                  {{#if isCat}} Conecta amb nosaltres:{{/if}}
-                  {{#if isEn}} Visit us at:{{/if}}
-                </h4>
-                <ul>
-                  <li><a href='https://www.facebook.com/babelpde' target='_blank'>Facebook</a></li>
-                  <li><a href='https://twitter.com/fundacion_babel' target='_blank'>Twitter</a></li>
-                </ul>
-          		<hr>
-            </div>
-            <div class='col-xs-12  col-md-offset-4 col-md-8'>
-              <h4><a href="https://babelpuntodeencuentro.wordpress.com/" target='_blank'>
-                {{#if isEs}} El Blog de Joseline:{{/if}}
-                {{#if isCat}} El Blog de la Joseline:{{/if}}
-                {{#if isEn}} Joseline's Blog :{{/if}}
-                Le Source du Bonheur</a></h4>
-                <hr>
-                
-            </div>
-            {{#if locals.is_desktop}}
-            <div class='col-xs-12 col-md-offset-4 col-md-2'>
-              <iframe allowtransparency="true" frameborder="0" height="430" scrolling="no" src="http://www.migranodearena.org/widget.php?q=aWRtPTEmY3JldG89NTY0OA==" width="250">No iframes supported</iframe>
-            {{else}}
-            <div class='col-xs-12 col-md-offset-4 col-md-8'>  
-              <div>
-                <h4>
-                  <a href="http://www.migranodearena.org/es/reto/5648/compra-un-ladrillo-solidario/" target='_blank'>Compra un ladrillo solidario!</a>
-                </h4>
-                <div>
-                  Colabora con la construcción de la casa de acogida <a href="http://www.migranodearena.org/es/reto/5648/compra-un-ladrillo-solidario/" target='_blank'>Le Source du Bonheur</a>, en Senegal.
-                </div>
-                <hr>
-              </div>
-              {{/if}}
-            </div>
-          </div>
-          
-          <div class='col-xs-12 col-md-4'>
-           
-              
-          </div>
-        </div>
+          {{> common/side_banners}}
       </div>
     </div>
     <div class='container-fluid'>
@@ -112,26 +41,7 @@
         {{> common/sponsors}}
       </div>
       <div class='col-xs-12 col-md-12'>
-        <div class='col-xs-12 col-sm-4'>
-          <h4>Dirección:</h4>
-          <address>
-            C/ del Mare de Deu del Pilar, 15 principal, 
-            08003 Barcelona<br>
-            {{#if isEs}}<strong>Estación de Metro</strong>:{{/if}}{{#if isCat}}<strong>Estació de Metro</strong>:{{/if}}{{#if isEn}}<strong>Metro</strong>: {{/if}}
-            Urquinaona (<strong>L1</strong>, <strong>L4</strong>)
-          </address>
-        </div>
-        <div class='col-xs-12 col-sm-4'>
-          <h4>Teléfonos:</h4>
-          <address>
-          93 295 57 93 /
-          629 577 430
-          </address>  
-        </div>
-        <div class='col-xs-12 col-sm-4'>
-          <h4>E-mail:</h4>
-          <address>info@babelpuntodeencuentro.org</address>
-        </div>
+        {{> common/contact_front_page}}
       </div>
     </div>
   </body>
@@ -144,6 +54,5 @@
         </ul>
       </div>
     </nav>
-    
   </footer>
 </html>
