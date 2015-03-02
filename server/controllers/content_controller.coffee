@@ -7,6 +7,10 @@ imagesHelper = require '../helpers/images'
 LanguageId = require '../helpers/language'
 Tumblr = require '../models/tumblr'
 
+module.exports.index = (req, res) ->
+  res.redirect(301, '/es/');
+  
+
 module.exports.get = (req, res) ->
   opts =  {layout: config.layout, tumblr_on: config.tumblr.on, locals: res.locals, ga: config.google.ga}
   

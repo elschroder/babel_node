@@ -3,7 +3,7 @@ routes = require './routes.json'
 module.exports =
   allowed_languages : ['es','en','cat']
   google:
-    ga:  process.env.ga || 'UA-59820967-1'
+    ga:  process.env.ga || 'UA-XXXXXXXX-1'
   tumblr:
     on: if process.env.tumblr_on then process.env.tumblr_on == "true" else true
     oauth: 
