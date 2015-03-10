@@ -8,12 +8,12 @@ module.exports.get = (limit=null, cb) ->
   getPosts(opts, cb)
   
 module.exports.getPost = (id, cb) ->
-  getPosts({id: id}, cb)
+  getPosts({id: id, blog_name: 'babelpde'}, cb)
 
 getPosts = (opts, cb) ->
   new Blog(tumblr.blog, tumblr.oauth)
     .posts(opts, (error, response) ->
-      cb(error) if error      
+      cb(error) if error     
       cb(null, postType(response.posts))
     )
 

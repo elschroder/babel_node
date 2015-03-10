@@ -12,6 +12,7 @@ module.exports =
     blog: process.env.tumblr_blog || 'babelpde.tumblr.com'
   news:
     limit: 10
-    templates: ['news','noticias','noticies']
+    templates: {'en':'news','es':'noticias','cat':'noticies'}
+    templates_front_page: {'en':'news_fp','es':'noticias_fp','cat':'noticies_fp'}
   routes: routes
   layout: 'babel'

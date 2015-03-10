@@ -1,6 +1,7 @@
 express = require 'express'
 exphbs = require 'express-handlebars'
 device = require 'express-device'
+favicon = require 'express-favicon'
 config = require 'config'
 deviceHelpers = require './helpers/device-helpers'
 app = express()
@@ -23,6 +24,7 @@ app.use device.capture() # describes waht type of device the user is using: Desk
 deviceHelpers(app)
 
 app.use '/assets', express.static("client/assets", {maxAge: 31536000 * 1000}) #cache for 1 year
+app.use favicon("#{process.cwd()}/client/assets/favicon.ico") 
 
 server = app.listen port, ->
   console.log "Listening on #{port}"
@@ -39,8 +41,6 @@ process.on('SIGTERM', ->
   )
 )
 
-
-console.log "passar isto pro middleware."
 require("./routes")(app)
 
 module.exports.app = app

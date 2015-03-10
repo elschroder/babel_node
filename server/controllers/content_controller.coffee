@@ -5,14 +5,12 @@ allowedLanguages = config.allowed_languages
 newsTemplates = config.news.templates
 imagesHelper = require '../helpers/images'
 LanguageId = require '../helpers/language'
-Tumblr = require '../models/tumblr'
 
 module.exports.index = (req, res) ->
   res.redirect(301, '/es/');
   
-
 module.exports.get = (req, res) ->
-  opts =  {layout: config.layout, tumblr_on: config.tumblr.on, locals: res.locals, ga: config.google.ga}
+  opts =  {layout: config.layout, locals: res.locals, ga: config.google.ga}
   
   language = req.params.language
   language = 'es' unless language
@@ -27,22 +25,4 @@ module.exports.get = (req, res) ->
   
   _.extend(opts, LanguageId(language))
   
-  if _.contains(_.union(newsTemplates, ['index']), content) && !(template.match('error')) && config.tumblr.on
-    
-    postLimit = config.news.limit unless _.contains(newsTemplates, content)
-
-    Tumblr.get(postLimit, (err, posts) ->
-      if err
-        opts.tumblr_on = false
-      if posts
-        opts.tumblr_on = false if posts?.length < 1
-        imagesHelper.addResponsiveImg(posts)
-        #move this to some helper
-        _.map(posts, (post) ->
-          _.extend(post, LanguageId(language) )
-        )
-        _.extend(opts, {tumblr_posts: posts})
-      res.render(template, opts)      
-    )
-  else
-    res.render(template, opts)
+  res.render(template, opts)

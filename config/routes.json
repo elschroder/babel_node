@@ -10,6 +10,7 @@
     "memoria_activitats",
     "menu",
     "noticies",
+    "noticies_fp",
     "projectes",
     "que_pots_fer_tu",
     "voluntaris"
@@ -23,6 +24,7 @@
     "international_coop",
     "menu",
     "news",
+    "news_fp",
     "past_activities",
     "projects",
     "volunteers",
@@ -40,6 +42,7 @@
     "miembros_patronato",
     "migracion_accion_social",
     "noticias",
+    "noticias_fp",
     "proyectos",
     "que_hacemos",
     "que_puedes_hacer_tu",
