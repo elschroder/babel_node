@@ -10,12 +10,9 @@ module.exports.index = (req, res) ->
   res.redirect(301, '/es/');
   
 module.exports.get = (req, res) ->
-  opts =  {layout: config.layout, locals: res.locals, ga: config.google.ga}
-  
+  opts =  {layout: config.layout, tumblr_on: config.tumblr.on, locals: res.locals, ga: config.google.ga}  
   language = req.params.language
-  language = 'es' unless language
   content = req.params.content
-  content = 'index' unless content
   
   if _.contains(routes[language], content)
     template = "#{language}/#{content}"
@@ -24,5 +21,4 @@ module.exports.get = (req, res) ->
     template = "#{language}/error"
   
   _.extend(opts, LanguageId(language))
-  
   res.render(template, opts)
