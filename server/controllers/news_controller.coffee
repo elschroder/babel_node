@@ -12,28 +12,23 @@ module.exports.get = (req, res) ->
   id = req.params.id
   
   if id && !_.contains(allowedLanguages, req.params.language)
-    console.log "if id lingua"
     res.redirect("/es/n/#{id}")
   else
-    console.log 'Else id e lingua direitos'
     opts =  {layout: config.layout, tumblr_on: config.tumblr.on, locals: res.locals, ga: config.google.ga}
-    language = if _.contains(allowedLanguages,req.params.language) then req.params.language else 'es'
+    language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
     _.extend(opts, LanguageId(language))
     
-    Tumblr.getPost(id, (err, callback)->
-      if callback && callback?.length > 0 && callback?[0].blog_name == 'babelpde' && (!err)
-        console.log 'else if'
-        callback = callback[0] 
-        _.extend(opts, {post_item: callback})
+    Tumblr.getPost(id, (err, newsItems) ->
+      if (!err) && newsItems && newsItems?.length > 0 && newsItems?[0].blog_name == 'babelpde' 
+        _.extend(opts, {post_item: newsItems[0]})
         res.render('common/tumblr/news/news_item', opts)
       else
-        console.log "todos os outros erros", err
         res.render('common/error', opts)
     )
 
 module.exports.index = (req, res) ->
   opts =  {layout: config.layout, tumblr_on: config.tumblr.on, locals: res.locals, ga: config.google.ga}
-  language = if _.contains(allowedLanguages,req.params.language) then req.params.language else 'es'
+  language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
   _.extend(opts, LanguageId(language))
   
   if !(_.contains(allowedLanguages,req.params.language))
