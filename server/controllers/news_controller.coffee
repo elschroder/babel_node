@@ -1,12 +1,14 @@
-Tumblr = require '../models/tumblr'
+_ = require 'lodash'
+
 config = require 'config'
 newsTemplates = config.news.templates
 newsTemplatesFP = config.news.templates_front_page
 allowedLanguages = config.allowed_languages
 
+Tumblr = require '../models/tumblr'
+
 imagesHelper = require '../helpers/images'
 LanguageId = require '../helpers/language'
-_ = require 'lodash'
 
 module.exports.get = (req, res) ->
   id = req.params.id
@@ -36,6 +38,7 @@ module.exports.index = (req, res) ->
   else
     Tumblr.get(config.news.limit, (err, posts) ->
       if !err && posts && posts?.length > 0 
+        imagesHelper.createPhotoTitle(posts)
         imagesHelper.addResponsiveImg(posts)
         #move this to some helper
         _.map(posts, (post) ->
