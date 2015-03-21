@@ -1,5 +1,6 @@
 _ = require 'lodash'
-
+_s = require "underscore.string"
+Moment = require 'moment-timezone'
 config = require 'config'
 newsTemplates = config.news.templates
 newsTemplatesFP = config.news.templates_front_page
@@ -21,8 +22,12 @@ module.exports.get = (req, res) ->
     _.extend(opts, LanguageId(language))
     
     Tumblr.getPost(id, (err, newsItems) ->
-      if (!err) && newsItems && newsItems?.length > 0 && newsItems?[0].blog_name == 'babelpde' 
-        _.extend(opts, {post_item: newsItems[0]})
+      if (!err) && newsItems && newsItems?.length > 0 && newsItems?[0].blog_name == 'babelpde'
+
+        imagesHelper.createPhotoTitle(newsItems)
+        reformatedPost = manipulatePost(newsItems[0], language)
+        
+        _.extend(opts, {post_item: reformatedPost})
         res.render('common/tumblr/news/news_item', opts)
       else
         res.render('common/error', opts)
@@ -37,14 +42,26 @@ module.exports.index = (req, res) ->
     res.redirect("/#{language}/")  
   else
     Tumblr.get(config.news.limit, (err, posts) ->
-      if !err && posts && posts?.length > 0 
+      if !err && posts && posts?.length > 0  
         imagesHelper.createPhotoTitle(posts)
         imagesHelper.addResponsiveImg(posts)
         #move this to some helper
         _.map(posts, (post) ->
-          _.extend(post, LanguageId(language) )
+          manipulatePost(post, language)
         )
         _.extend(opts, {tumblr_posts: posts})
       template = "#{language}/#{newsTemplatesFP[language]}"
       res.render(template, opts)         
     )
+
+manipulatePost = (post, language) ->
+  post.caption_summary = _s.prune(post.caption, 640) if post.caption
+  post.caption_summary = post.caption_summary.replace(/\.\.\.$/, " <a href='/#{language}/n/#{post.id}'>[+]<a>") if post.caption_summary
+  post.body_summary = _s.prune(post.body, 640) if post.body
+  post.body_summary = post.body_summary.replace(/\.\.\.$/, " <a href='/#{language}/n/#{post.id}'>[+]<a>") if post.body_summary
+  
+  dateLang = language
+  dateLang = 'ca' if language == 'cat'
+  post.date = Moment(post.timestamp, 'X').tz("Europe/Madrid").locale("#{dateLang}").format('LLL')
+  _.extend(post, LanguageId(language))
+  post

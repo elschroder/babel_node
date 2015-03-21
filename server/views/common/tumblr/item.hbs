@@ -2,20 +2,21 @@
 <hr>
 <h2><a href={{#if isEs}}"/es/n/{{id}}"{{/if}}{{#if isCat}}"/cat/n/{{id}}"{{/if}}{{#if isEn}}"/en/n/{{id}}"{{/if}}>{{title}}</a></h2>
 {{#if isPhoto}}
-  <div>{{{caption}}}</div>
+  <div>{{{caption_summary}}}</div>
   <div>
   {{#each photos}}
-    <img class='img-responsive' src={{original_size.url}}>
+    <a href="{{original_size.url}}"target='_blank'><img class='img-responsive' src={{original_size.url}}></a>
   {{/each}}
   </div>
 {{/if}}
 {{#if isText}}
-  <div>{{{body}}}</div>
+  <div>{{{body_summary}}}</div>
 {{/if}}
 <hr>
-<a href={{#if isEs}}"/es/n/{{id}}"{{/if}}{{#if isCat}}"/cat/n/{{id}}"{{/if}}{{#if isEn}}"/en/n/{{id}}"{{/if}}> <em>
-  {{date}}</em></a>
-  
-
+<div> <em>{{date}}</em>
+<a href={{#if isEs}}"/es/n/{{id}}"{{/if}}{{#if isCat}}"/cat/n/{{id}}"{{/if}}{{#if isEn}}"/en/n/{{id}}"{{/if}}> <em> 
+  {{#if isEs}}(leer más...){{/if}}{{#if isCat}}(llegir més...){{/if}}{{#if isEn}}(read more...){{/if}}
+  </em></a>
+</div>
 
   

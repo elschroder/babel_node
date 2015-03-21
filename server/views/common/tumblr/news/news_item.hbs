@@ -4,7 +4,7 @@
   <div>{{{post_item.caption}}}</div>
   <div>
   {{#each post_item.photos}}
-    <img class='img-responsive' src={{original_size.url}}>
+    <a href="{{original_size.url}}"target='_blank'><img class='img-responsive' src={{original_size.url}}></a>
   {{/each}}
   </div>
 {{/if}}
@@ -17,7 +17,7 @@
 <hr>
 
 <a href={{#if isEs}}"/es/noticias/"{{/if}}{{#if isCat}}"/cat/noticies/"{{/if}}{{#if isEn}}"/en/news/"{{/if}}>
-  {{#if isEs}}volver a noticias{{/if}}{{#if isCat}} noticies{{/if}}{{#if isEn}} back to news{{/if}}
+  {{#if isEs}}Volver a noticias{{/if}}{{#if isCat}}Tornar a les notícies{{/if}}{{#if isEn}}Back to news{{/if}}
 </em></a>
 
   
