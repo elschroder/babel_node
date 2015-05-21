@@ -6,9 +6,8 @@ config = require 'config'
 deviceHelpers = require './helpers/device-helpers'
 app = express()
 
-env = process.env.NODE_ENV || process.env.OPENSHIFT_NODEJS_PORT  || 'development'
+env = process.env.NODE_ENV || 'development'
 port = process.env.PORT || 6100
-ipaddress = process.env.OPENSHIFT_NODEJS_IP
 
 exphbsConf = exphbs.create(
   #helpers: hbshelpers
@@ -27,8 +26,7 @@ deviceHelpers(app)
 app.use '/assets', express.static("client/assets", {maxAge: 31536000 * 1000}) #cache for 1 year
 app.use favicon("#{process.cwd()}/client/assets/favicon.ico") 
 
-
-server = app.listen port,ipaddress, ->
+server = app.listen port, ->
   console.log "Listening on #{port}"
 
 server.addListener("connection", (stream) ->
