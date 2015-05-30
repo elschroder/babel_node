@@ -4,7 +4,7 @@
   "description": "new babelpde website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": " mocha --compilers coffee:coffee-script/register -u bdd -R spec -t 500 --recursive"
   },
   "author": "",
   "license": "ISC",
@@ -20,8 +20,12 @@
     "hbs": "~2.7.0",
     "lodash": "^2.4.1",
     "moment-timezone": "^0.3.1",
-    "underscore.string": "^3.0.1",
-    "tumblr": "^0.4.1"
-    
+    "should": "^6.0.3",
+    "supertest": "^1.0.1",
+    "tumblr": "^0.4.1",
+    "underscore.string": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0"
   }
 }
