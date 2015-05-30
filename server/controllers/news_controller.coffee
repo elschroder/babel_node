@@ -6,7 +6,7 @@ allowedLanguages = config.allowed_languages
 
 Tumblr = require '../models/tumblr'
 
-TumblrHelper = require '../helpers/images'
+TumblrHelper = require '../helpers/tumblr'
 LanguageId = require '../helpers/language'
 
 module.exports.get = (req, res) ->
@@ -21,9 +21,8 @@ module.exports.get = (req, res) ->
     
     Tumblr.getPost(id, (err, newsItems) ->
       if (!err) && newsItems && newsItems?.length > 0 && newsItems?[0].blog_name == 'babelpde'
-
         TumblrHelper.createPhotoTitle(newsItems)
-        reformatedPost = TumblrHelper.manipulatePost(newsItems[0], language)
+        reformatedPost = TumblrHelper.manipulatePostNeedsRefactoring(newsItems[0], language)
         
         _.extend(opts, {post_item: reformatedPost})
         res.render('common/tumblr/news/news_item', opts)
@@ -44,7 +43,7 @@ module.exports.index = (req, res) ->
         TumblrHelper.createPhotoTitle(posts)
         TumblrHelper.addResponsiveImg(posts)
         _.map(posts, (post) ->
-          TumblrHelper.manipulatePost(post, language)
+          TumblrHelper.manipulatePostNeedsRefactoring(post, language)
         )
         _.extend(opts, {tumblr_posts: posts})
       template = "#{language}/#{newsTemplatesFP[language]}"
