@@ -3,7 +3,7 @@ config = require 'config'
 routes = config.routes
 allowedLanguages = config.allowed_languages
 newsTemplates = config.news.templates
-imagesHelper = require '../helpers/images'
+TumblrHelper = require '../helpers/tumblr'
 LanguageId = require '../helpers/language'
 
 module.exports.index = (req, res) ->
