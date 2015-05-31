@@ -10,7 +10,7 @@ module.exports.index = (req, res) ->
   res.redirect(301, '/es/');
   
 module.exports.get = (req, res) ->
-  opts =  {layout: config.layout, tumblr_on: config.tumblr.on, locals: res.locals, ga: config.google.ga}  
+  opts =  {layout: config.layout, tumblr_on: config.tumblr.on, is_mi_grano_de_arena: config.is_mi_grano_de_arena, locals: res.locals, ga: config.google.ga}  
   language = req.params.language
   content = req.params.content
   
