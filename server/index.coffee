@@ -2,6 +2,7 @@ express = require 'express'
 exphbs = require 'express-handlebars'
 device = require 'express-device'
 favicon = require 'express-favicon'
+compression = require 'compression'
 config = require 'config'
 deviceHelpers = require './helpers/device-helpers'
 app = express()
@@ -25,6 +26,8 @@ deviceHelpers(app)
 
 app.use '/assets', express.static("client/assets", {maxAge: 31536000 * 1000}) #cache for 1 year
 app.use favicon("#{process.cwd()}/client/assets/favicon.ico") 
+
+app.use compression()
 
 server = app.listen port, ->
   console.log "Listening on #{port}"
