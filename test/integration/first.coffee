@@ -1,6 +1,6 @@
 request = require 'supertest'
 assert = require 'assert'
-app = require '../server'
+app = require '../../server'
 
 server = request(app.app)
 
@@ -20,15 +20,24 @@ describe 'GET /', () ->
           done()
         )
 describe 'hiting the language root', ->
-  describe '/es/', ->
+  describe '/es/que_hacemos', ->
     it 'should render the spanish version of the website', (done)->
       server
-      .get('/es')
+      .get('/es/que_hacemos')
       .expect(200)
       .end((err, res) ->
         if err
           return done(err)
         else
-          return done(res)
+          done()
         )
-        
+    it 'should not render 404 when the page does not exist', (done)->
+      server
+      .get('/es/foobar_fake_root')
+      .expect(404)
+      .end((err, res) ->
+        if err
+          return done(err)
+        else
+          done()
+        )
