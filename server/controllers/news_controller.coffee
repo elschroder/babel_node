@@ -15,7 +15,7 @@ module.exports.get = (req, res) ->
   if id && !_.contains(allowedLanguages, req.params.language)
     res.redirect("/es/n/#{id}")
   else
-    opts =  {layout: config.layout, tumblr_on: config.tumblr.on, is_mi_grano_de_arena: config.is_mi_grano_de_arena locals: res.locals, ga: config.google.ga}
+    opts =  {layout: config.layout, tumblr_on: config.tumblr.on, is_mi_grano_de_arena: config.is_mi_grano_de_arena, locals: res.locals, ga: config.google.ga}
     language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
     _.extend(opts, LanguageId(language))
     
