@@ -16,6 +16,10 @@
   color:white;
 }
 
+.sponsors-others img {
+  margin-bottom: 40px;
+  
+}
 </style>
 
 <html class='container-fluid'>
@@ -39,13 +43,15 @@
       <div class='row hidden-xs hidden-sm '>      
         {{> common/sponsors}}
       </div>
+      <div class='row hidden-xs hidden-sm '>      
+        {{> common/sponsors_others}}
+      </div>
       <hr>
       <div class='col-xs-12 col-md-12'>
         {{> common/contact_front_page}}
       </div>
     </div>
   </body>
-  {{> common/ga}}
   <footer>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
@@ -58,3 +64,4 @@
 </html>
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+{{> common/ga}}
