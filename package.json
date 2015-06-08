@@ -4,11 +4,11 @@
   "description": "new babelpde website",
   "main": "index.js",
   "engines": {
-      "npm": "2.11.x",
-      "node": "0.12.2"
+    "npm": "2.11.x",
+    "node": "0.12.2"
   },
   "scripts": {
-    "test": " mocha --compilers coffee:coffee-script/register -u bdd -R spec -t 500 --recursive"
+    "test": " mocha --compilers coffee:coffee-script/register -u bdd -R spec -t 5000 --recursive"
   },
   "author": "",
   "license": "ISC",
@@ -30,7 +30,10 @@
     "bower": "~1.3.2",
     "chai": "^2.3.0",
     "grunt": "0.4.5",
+    "sandboxed-module": "^2.0.2",
     "should": "^6.0.3",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0",
     "supertest": "^1.0.1"
   }
 }
