@@ -14,7 +14,7 @@ module.exports.createPhotoTitle = (posts) ->
     if post.type == 'photo'
       caption = post.caption
       
-      caption = caption.replace(/\n/g, 'foo ')
+      caption = caption.replace(/\n/g, '<br>')
       
       splitCaption = /\<h2\>(.*?)\<\/h2\>/i.exec(caption)
       #caption = caption.replace('\n', ' ')
