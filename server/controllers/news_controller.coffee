@@ -10,43 +10,35 @@ TumblrHelper = require '../helpers/tumblr'
 LanguageId = require '../helpers/language'
 
 module.exports.get = (req, res) ->
-  id = req.params.id
-  
-  if id && !_.contains(allowedLanguages, req.params.language)
-    res.redirect("/es/n/#{id}")
-  else
-    opts =  {layout: config.layout, tumblr_on: config.tumblr.on, is_mi_grano_de_arena: config.is_mi_grano_de_arena, locals: res.locals, ga: config.google.ga}
-    language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
-    _.extend(opts, LanguageId(language))
-    
-    Tumblr.getPost(id, (err, newsItems) ->
-      if (!err) && newsItems && newsItems?.length > 0 && newsItems?[0].blog_name == 'babelpde'
-        TumblrHelper.createPhotoTitle(newsItems)
-        reformatedPost = TumblrHelper.manipulatePostNeedsRefactoring(newsItems[0], language)
-        
-        _.extend(opts, {post_item: reformatedPost})
-        res.render('common/tumblr/news/news_item', opts)
-      else
-        res.render('common/error', opts)
-    )
+  language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'  
+  opts = setOpts(req, res, language)
+      
+  Tumblr.getPost(req.params.id, (err, post) ->
+    res.render('common/error', opts) if err 
+    _.extend(opts, {post_item: TumblrHelper.prettyPrintPost(post, language) })
+    res.render('common/tumblr/news/news_item', opts)
+  )
 
 module.exports.index = (req, res) ->
-  opts =  {layout: config.layout, tumblr_on: config.tumblr.on, is_mi_grano_de_arena: config.is_mi_grano_de_arena, locals: res.locals, ga: config.google.ga}
   language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
-  _.extend(opts, LanguageId(language))
+  opts = setOpts(req, res, language)
   
-  if !(_.contains(allowedLanguages,req.params.language))
-    res.redirect("/#{language}/")  
+  if !(_.contains(allowedLanguages, req.params.language)) #this is a helper to sanitise the urls.
+    res.redirect("/#{language}/")    
   else
     Tumblr.get(config.news.limit, (err, posts) ->
-      if !err && posts && posts?.length > 0  
-        TumblrHelper.createPhotoTitle(posts)
-        TumblrHelper.addResponsiveImg(posts)
-        _.map(posts, (post) ->
-          TumblrHelper.manipulatePostNeedsRefactoring(post, language)
-        )
+      if !err && posts?.length > 0  
+        _.each(posts, (post) ->
+          TumblrHelper.prettyPrintPost(post, language)
+          )
         _.extend(opts, {tumblr_posts: posts})
-      template = "#{language}/#{newsTemplatesFP[language]}"
-      res.render(template, opts)         
+        template = "#{language}/#{newsTemplatesFP[language]}"
+        res.render(template, opts)
+      else
+        res.render("#{language}/error", opts)    
     )
 
+setOpts = (req, res, language) ->
+  opts =  {layout: config.layout, tumblr_on: config.tumblr.on, is_mi_grano_de_arena: config.is_mi_grano_de_arena, locals: res.locals, ga: config.google.ga}
+  _.extend(opts, LanguageId(language))
+  opts
