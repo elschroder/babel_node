@@ -34,6 +34,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-cssmin": "^0.13.0",
     "grunt-contrib-uglify": "^0.9.1",
+    "grunt-inline": "^0.3.6",
     "sandboxed-module": "^2.0.2",
     "should": "^6.0.3",
     "sinon": "^1.14.1",

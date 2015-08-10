@@ -14,7 +14,7 @@ exphbsConf = exphbs.create(
   #helpers: hbshelpers
   extname: '.hbs', 
   viewsDir: 'server/views/'
-  layoutsDir: 'server/views/layouts'
+  layoutsDir: 'server/views/layouts/dist'
   partialsDir: ['server/views/']
 )
 app.engine('.hbs', exphbsConf.engine)

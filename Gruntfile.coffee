@@ -39,12 +39,18 @@ module.exports = (grunt) ->
             ext: '.min.css'
           
         ]
+    inline:
+      dist:
+        options:
+          exts: ['hbs']
+        src: 'server/views/layouts/_babel.hbs'
+        dest: 'server/views/layouts/dist/babel.hbs'
   )
   grunt.loadNpmTasks('grunt-bower-concat')
   grunt.loadNpmTasks('grunt-contrib-clean')
   
   grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
-  
+  grunt.loadNpmTasks('grunt-inline')
   grunt.loadTasks('tasks')  
-  grunt.registerTask('default', ['bower:install', 'bower_concat',  'uglify', 'cssmin', 'clean'])
+  grunt.registerTask('default', ['bower:install', 'bower_concat',  'uglify', 'cssmin', 'inline', 'clean'])
