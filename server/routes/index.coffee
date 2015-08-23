@@ -3,6 +3,11 @@ newsController = require "../controllers/news_controller"
 
 module.exports = (app) ->
   
+  app.route '/robots.txt'
+    .get (req, res) ->
+      res.type('text/plain') 
+      res.send("User-agent: *\nDisallow: /")  
+  
   app.route '/'
     .get contentController.index
   
