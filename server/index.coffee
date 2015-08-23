@@ -21,6 +21,18 @@ app.engine('.hbs', exphbsConf.engine)
 app.set 'views', "#{__dirname}/views/"
 app.set 'view engine', '.hbs' 
 
+
+
+app.use (req, res, next ) ->
+  if req.query.q?.match('en/rss.xml')
+    ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+    console.log "ip->", ip
+    console.log "req.host", req.host
+    console.log "req.parmas", req.params
+    console.log "req.query", req.query
+    console.log "req.path", req.path
+  next()
+  
 app.use device.capture() # describes waht type of device the user is using: Desktop/mobile/tablet/etc   
 deviceHelpers(app)
 
