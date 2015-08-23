@@ -7,9 +7,20 @@ TumblrHelper = require '../helpers/tumblr'
 LanguageId = require '../helpers/language'
 
 module.exports.index = (req, res) ->
-  language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
-  if !(_.contains(allowedLanguages, req.params.language)) #this is a helper to sanitise the urls.
-    res.redirect(301, "/#{language}/")
+  console.log "req.path", req.path
+  console.log "req.query", req.query
+  if req.query.q
+    ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+    console.log "ip->", ip
+    console.log "req.host", req.host
+    console.log "req.parmas", req.params
+    console.log "req.query", req.query
+    console.log "req.path", req.path
+    res.status(404).send('Not found')
+  else
+    language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
+    if !(_.contains(allowedLanguages, req.params.language)) #this is a helper to sanitise the urls.
+      res.redirect(301, "/#{language}/")
 
 module.exports.get = (req, res) ->
   language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
