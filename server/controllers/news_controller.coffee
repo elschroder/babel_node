@@ -14,9 +14,11 @@ module.exports.get = (req, res) ->
   opts = setOpts(req, res, language)
       
   Tumblr.getPost(req.params.id, (err, post) ->
-    res.render('common/error', opts) if err 
-    _.extend(opts, {post_item: TumblrHelper.prettyPrintPost(post, language) })
-    res.render('common/tumblr/news/news_item', opts)
+    if err
+      res.render('common/error', opts)  
+    else
+      _.extend(opts, {post_item: TumblrHelper.prettyPrintPost(post, language) })
+      res.render('common/tumblr/news/news_item', opts)
   )
 
 module.exports.index = (req, res) ->
@@ -42,3 +44,4 @@ setOpts = (req, res, language) ->
   opts =  {layout: config.layout, tumblr_on: config.tumblr.on, is_mi_grano_de_arena: config.is_mi_grano_de_arena, locals: res.locals, ga: config.google.ga}
   _.extend(opts, LanguageId(language))
   opts
+  

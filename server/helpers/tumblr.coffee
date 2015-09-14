@@ -7,6 +7,7 @@ setTitle = (post) ->
   if post.type == 'photo' #if a post is of the type photo we need to create a title.
     caption = post.caption
     caption = caption.replace(/\n/g, ' ')
+    caption = caption.replace(/\s\s+/g, ' ') #removes any extra space
     splitCaption = /\<h2\>(.*?)\<\/h2\>/i.exec(caption)
     post.title = splitCaption?[1]?.replace(/<(.|\n)*?>/g, '')
     post.caption = caption.replace(splitCaption?[0],'')
@@ -34,18 +35,18 @@ setSummary = (post, language) ->
 setDate = (post, language) ->
   language = 'ca' if language == 'cat'
   post.date = Moment(post.timestamp, 'X').tz("Europe/Madrid").locale("#{language}").format('LLL')
-  
+
+setType = (post) ->
+  post.isText = true if post.type == 'text'
+  post.isPhoto = true if post.type == 'photo'
+  post.isVideo = true if post.type == 'video'
+  post
+
 module.exports.prettyPrintPost = prettyPrintPost = (post, language) ->
+  setType(post)
   setTitle(post)
   setScaledImages(post)
   setSummary(post, language)
   setDate(post, language)
   post
-  
-#module.exports.addResponsiveImg = (posts) ->
-#  _.each(posts, (post) ->
-#    if post.body
-#      post.body = post.body.replace(/\<img src/g, "<img class='img-responsive' src")
-#  )
-  
   
