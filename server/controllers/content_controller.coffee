@@ -16,7 +16,7 @@ module.exports.index = (req, res) ->
     console.log "req.parmas", req.params
     console.log "req.query", req.query
     console.log "req.path", req.path
-    res.status(501).send(null)
+    res.status(410).send(null) 
   else
     language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
     if !(_.contains(allowedLanguages, req.params.language)) #this is a helper to sanitise the urls.
