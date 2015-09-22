@@ -25,11 +25,10 @@ app.set 'view engine', '.hbs'
 
 
 app.use (req, res, next ) ->
-  console.log "req", req.path
   if req.query.q
     ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
     console.log "ip->", ip
-    console.log "req.host", req.host
+    console.log "req.host", req.hostname
     console.log "req.parmas", req.params
     console.log "req.query", req.query
     console.log "req.path", req.path
@@ -61,8 +60,6 @@ process.on('SIGTERM', ->
 
 #this is a middleware language validator. any request other than the valid get 404
 app.use '/:language/', (req, res, next ) ->
-  console.log "language validator", req.params
-  console.log "_.contains(allowedLanguages, req.params.language)", _.contains(config.allowed_languages, req.params.language)
   if _.contains(config.allowed_languages, req.params.language)
     next()
   else
