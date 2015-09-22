@@ -4,6 +4,7 @@ device = require 'express-device'
 favicon = require 'express-favicon'
 compression = require 'compression'
 config = require 'config'
+_ = require 'lodash'
 deviceHelpers = require './helpers/device-helpers'
 app = express()
 
@@ -24,7 +25,8 @@ app.set 'view engine', '.hbs'
 
 
 app.use (req, res, next ) ->
-  if req.query.q?.match('en/rss.xml')
+  console.log "req", req.path
+  if req.query.q
     ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
     console.log "ip->", ip
     console.log "req.host", req.host
@@ -56,6 +58,15 @@ process.on('SIGTERM', ->
     process.exit(0)
   )
 )
+
+#this is a middleware language validator. any request other than the valid get 404
+app.use '/:language/', (req, res, next ) ->
+  console.log "language validator", req.params
+  console.log "_.contains(allowedLanguages, req.params.language)", _.contains(config.allowed_languages, req.params.language)
+  if _.contains(config.allowed_languages, req.params.language)
+    next()
+  else
+    res.send(404)
 
 require("./routes")(app)
 

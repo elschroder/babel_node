@@ -7,7 +7,7 @@ expect = chai.expect
 chai.use(sinonChai)
 TumblrModel = require ('../../server/models/tumblr')
 
-describe 'Unit Testing Tumblr Mode', () ->
+describe 'Unit Testing Tumblr Model', () ->
   describe "wrong credentials", () ->
     it "will not fetch a single post", (done) ->
       sinon.stub(TumblrModel, 'getPosts').yields('401 Not Authorized',null)

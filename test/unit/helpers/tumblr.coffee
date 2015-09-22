@@ -8,7 +8,6 @@ chai.use(sinonChai)
 
 Moment = require 'moment-timezone'
 
-
 TumblrModel = require ('../../../server/models/tumblr')
 TumblrHelper = require "../../../server/helpers/tumblr"
 
@@ -43,7 +42,6 @@ post_with_photos =
                 { width: 100, height: 70, url: 'http://40.media.tumblr.com/63eaeca665f428b2b0568cdfed417b68/tumblr_nlatwhOopd1upnec3o1_100.jpg' },
                 { width: 75, height: 75,  url: 'http://41.media.tumblr.com/63eaeca665f428b2b0568cdfed417b68/tumblr_nlatwhOopd1upnec3o1_75sq.jpg' } 
               ],original_size: { width: 1211, height: 850, url: 'http://41.media.tumblr.com/63eaeca665f428b2b0568cdfed417b68/tumblr_nlatwhOopd1upnec3o1_1280.jpg' }}]
-
 
 post_text_only = { 
   blog_name: 'babelpde',
@@ -130,15 +128,3 @@ describe 'Unit Testing Tumblr Helper', () ->
       it "should contain the text between of the first h2 tag without any newlines and no extra space", (done) ->
         expect(foo.title).to.not.to.contain('   ')
         done()
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
