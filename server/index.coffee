@@ -60,7 +60,7 @@ process.on('SIGTERM', ->
 
 #this is a middleware language validator. any request other than the valid get 404
 app.use '/:language/', (req, res, next ) ->
-  if _.contains(config.allowed_languages, req.params.language)
+  if _.contains(config.allowed_languages, req.params.language) || req.params.language == 'robots.txt'
     next()
   else
     res.send(404)
