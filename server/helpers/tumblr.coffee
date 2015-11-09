@@ -27,9 +27,9 @@ setScaledImages = (post) ->  #picks a smaller image and all tumblr links are red
         
 setSummary = (post, language) ->
   post.caption_summary = _s.prune(post.caption, 640) if post.caption
-  post.caption_summary = post.caption_summary.replace(/\.\.\.$/, " <a href='/#{language}/n/#{post.id}'>[+]<a>") if post.caption_summary
-  post.body_summary = _s.prune(post.body, 640) if post.body
-  post.body_summary = post.body_summary.replace(/\.\.\.$/, " <a href='/#{language}/n/#{post.id}'>[+]<a>") if post.body_summary
+  post.caption_summary = post.caption_summary.replace(/\.\.\.$/, " <a href='/#{language}/n/#{post.id}'>[+]<a></b></i></p>") if post.caption_summary #extra </b></i></p> are result of a work-around to circunvent the missing closing tags when the text is truncated. scripts to find them where quite heavy.
+  post.body_summary =  _s.prune(post.body, 640) if post.body
+  post.body_summary = post.body_summary.replace(/\.\.\.$/, " <a href='/#{language}/n/#{post.id}'>[+]<a></b></i></p>") if post.body_summary #extra </b></i></p> are result of a work-around to circunvent the missing closing tags when the text is truncated. scripts to find them where quite heavy.
   _.extend(post, LanguageId(language))
 
 setDate = (post, language) ->
