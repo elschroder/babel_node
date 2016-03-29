@@ -1,4 +1,5 @@
 # file organisation
+
 ## spanish
 |
 |
@@ -15,3 +16,8 @@ remove for now
 
 ### help
 git push test foundation-layout:master
+
+#technical
+
+### update node latest
+### update to javascript 2015
