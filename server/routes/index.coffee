@@ -12,7 +12,7 @@ module.exports = (app) ->
     .get contentController.index
   
   app.route "/:language/"
-    .get newsController.index
+    .get contentController.get
 
   app.route "/:language/noticies/"
     .get newsController.index

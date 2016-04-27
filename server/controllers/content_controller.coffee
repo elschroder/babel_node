@@ -22,6 +22,7 @@ module.exports.index = (req, res) ->
 
 module.exports.get = (req, res) ->
   unless _.contains(allowedLanguages, req.params.language)
+    console.log 'not allowerd languega', req.params.language
     res.send(404)
   else
     language = if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
@@ -29,7 +30,7 @@ module.exports.get = (req, res) ->
     _.extend(opts, LanguageId(language))
     
     content = req.params.content
-    
+    console.log "content ", content
     if _.contains(routes[language], content)
       template = "#{language}/#{content}"
       opts.status = 200

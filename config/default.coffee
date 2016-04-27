@@ -1,7 +1,7 @@
 routes = require './routes.json'
 
 module.exports =
-  allowed_languages : ['es','en','cat']
+  allowed_languages : ['es'] #,'en','cat']
   google:
     ga:  process.env.ga || 'UA-XXXXXXXX-1'
   tumblr:
@@ -16,4 +16,4 @@ module.exports =
     templates_front_page: {'en':'news_fp','es':'noticias_fp','cat':'noticies_fp'}
   is_mi_grano_de_arena: if process.env.mi_grano_de_arena then process.env.mi_grano_de_arena == "true" else false
   routes: routes
-  layout: '_babel'
+  layout: 'babel'

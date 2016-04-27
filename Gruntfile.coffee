@@ -43,7 +43,7 @@ module.exports = (grunt) ->
       dist:
         options:
           exts: ['hbs']
-        src: 'server/views/layouts/_babel.hbs'
+        src: 'server/views/layouts/babel.hbs'
         dest: 'server/views/layouts/dist/babel.hbs'
   )
   grunt.loadNpmTasks('grunt-bower-concat')
