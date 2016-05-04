@@ -1,0 +1,28 @@
+html {
+  margin: 0px 0px;
+}
+
+
+.language_bar {
+  padding: 8px 8px 8px 0px;
+  
+  top: 0;
+  text-align: right;
+  font-size: 14px;
+  position: relative;
+  /*top: 50%;
+  transform: translateY(50%);
+*/
+  color: #808080;
+  
+  background-color: #E0E0E0;
+}
+
+.language_bar img {
+  width: 24px;
+  height: auto;
+  opacity: 0.4;
+  
+/*  transform: translateY(-5%);*/
+
+}
