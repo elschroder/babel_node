@@ -1,26 +1,53 @@
-        <div class='col-xs-12 col-sm-4'>
-          {{#if isEs}}<h4>Dirección (provisional):</h4>{{/if}}{{#if isCat}}<h4>La Nostra adreça (provisional):</h4>{{/if}}{{#if isEn}}<h4>Address (temporary):</h4>{{/if}}
-          <address>
-            Travessera de les Corts, 228 bis, Entresol 3ª<br>
-            08028 Barcelona<br>
-            <br>
-            {{#if isEs}}<strong>Estación de Metro</strong>:<br>{{/if}}{{#if isCat}}<strong>Estació de Metro</strong>:{{/if}}{{#if isEn}}<strong>Metro</strong>: {{/if}}
-            Les Corts (<strong>L3</strong>)
-          </address>
-        </div>
-        <div class='col-xs-12 col-sm-4'>
-          <address>
-            {{#if isEs}}<h4>Horario:</h4>  <strong>Lunes</strong>: 10-14h, 15-19h. <strong>Martes</strong> a <strong>Jueves</strong>: 10-14h. <br> Horario de atenciones, toda la semana con cita previa.{{/if}}
-            {{#if isEn}}<h4>Opening times:</h4>  <strong>Mon</strong> 10-14h, 15-19h. <strong>Tue-Thur</strong> 10-14h.{{/if}}
-            {{#if isCat}}<h4>Horari:</h4>  <strong>Dilluns</strong>: 10-14h, 15-19h. <strong>Dimarts</strong> a <strong>Dijous</strong>: 10-14h.{{/if}}
-          </address>
-        </div>
-        <div class='col-xs-12 col-sm-4'>
-          <h4>Email:</h4>
-          <address>info@babelpuntodeencuentro.org</address>
-          {{#if isEs}}<h4>Teléfonos:</h4>{{/if}}{{#if isCat}}<h4>Telèfons:</h4>{{/if}}{{#if isEn}}<h4>Phones:</h4>{{/if}}          
-          <address>
-          93 295 57 93 <br>
-          629 577 430
-          </address>
-        </div>
+<div class="inner-sponsor-tab-footer large-5 columns"> 
+  <div class='contact'>
+      
+      <address>
+        +34 93 295 57 93 
+      </address>
+      <address>
+        +34 629 577 430
+      </address>
+      
+      <address>info@babelpuntodeencuentro.org</address>
+      <div class="contact-social">
+        <svg id="facebook-contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.62 74.62">
+          <title>iconos y logo</title>
+          <g id="Page-1">
+            <path id="Facebook-2" data-name="Facebook" d="M30,74.08a37.32,37.32,0,1,1,11.1.54V46.94l5.38-.05,5.38-.05L52,43.14c0.11-2,.2-4.32.21-5.05l0.05-1.3H41.06l0.05-4.7c0-4.54.05-4.75,0.41-5.4C42.3,25.29,43.34,25,48.41,25H52l0.1-4.65c0.07-2.54.09-4.61,0.05-4.65a35.88,35.88,0,0,0-6.36-.4,20,20,0,0,0-7.29.9,12.13,12.13,0,0,0-8,8.1c-0.32,1-.36,1.55-0.41,6.75L30,36.79H22.39V46.94h7.71L30,60.75C29.94,67,29.93,72.31,30,74.08Z"/>
+          </g>
+        </svg>
+        <svg id="facebook-contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.62 74.62">
+          <title>iconos y logo</title>
+          <g id="Page-1">
+            <path id="Facebook-2" data-name="Facebook" d="M30,74.08a37.32,37.32,0,1,1,11.1.54V46.94l5.38-.05,5.38-.05L52,43.14c0.11-2,.2-4.32.21-5.05l0.05-1.3H41.06l0.05-4.7c0-4.54.05-4.75,0.41-5.4C42.3,25.29,43.34,25,48.41,25H52l0.1-4.65c0.07-2.54.09-4.61,0.05-4.65a35.88,35.88,0,0,0-6.36-.4,20,20,0,0,0-7.29.9,12.13,12.13,0,0,0-8,8.1c-0.32,1-.36,1.55-0.41,6.75L30,36.79H22.39V46.94h7.71L30,60.75C29.94,67,29.93,72.31,30,74.08Z"/>
+          </g>
+        </svg>
+      
+      </div>
+      <!-- {{#if isEs}}<h4>Teléfonos:</h4>{{/if}}{{#if isCat}}<h4>Telèfons:</h4>{{/if}}{{#if isEn}}<h4>Phones:</h4>{{/if}}           -->
+      
+  </div>
+  <div class='address1'>
+    <!-- {{#if isEs}}<h4>Dirección (provisional):</h4>{{/if}}{{#if isCat}}<h4>La Nostra adreça (provisional):</h4>{{/if}}{{#if isEn}}<h4>Address (temporary):</h4>{{/if}} -->
+    <address>
+      Travessera de les Corts, 228 bis, Entresol 3ª,
+      08028 Barcelona <br>
+      <!-- <br> -->
+      <!-- {{#if isEs}}<strong>Estación de Metro</strong>:<br>{{/if}}{{#if isCat}}<strong>Estació de Metro</strong>:{{/if}}{{#if isEn}}<strong>Metro</strong>: {{/if}} -->
+      Metro Les Corts (L3)
+    </address>
+  </div>
+  
+  <div class='col-xs-12 col-sm-4'>
+    <address>
+      {{#if isEs}}Lunes: 10-14h, 15-19h. Martes a Jueves: 10-14h. <br> Horario de atenciones, toda la semana con cita previa.{{/if}}
+      {{#if isEn}}<h4>Opening times:</h4>  <strong>Mon</strong> 10-14h, 15-19h. <strong>Tue-Thur</strong> 10-14h.{{/if}}
+      {{#if isCat}}<h4>Horari:</h4>  <strong>Dilluns</strong>: 10-14h, 15-19h. <strong>Dimarts</strong> a <strong>Dijous</strong>: 10-14h.{{/if}}
+    </address>
+  </div>
+</div>
+<div class ="large-7 columns"> 
+TO BE DELETED 
+</div>
+      
+        

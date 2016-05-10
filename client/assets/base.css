@@ -1,10 +1,18 @@
 html {
-  margin: 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+header {
+  padding: 0 0 4em;
+}
+.main-logo {
+  max-height: 40px;
 }
 
 
-.language_bar {
-  padding: 8px 8px 8px 0px;
+.language-bar {
+  padding: 8px 4em 8px 0px;
+  margin: 0px 0px 20px 0px;
   
   top: 0;
   text-align: right;
@@ -18,7 +26,7 @@ html {
   background-color: #E0E0E0;
 }
 
-.language_bar img {
+.language-bar img {
   width: 24px;
   height: auto;
   opacity: 0.4;
@@ -26,3 +34,68 @@ html {
 /*  transform: translateY(-5%);*/
 
 }
+
+.sponsor-tab-footer {
+  margin-top: 80px;
+/*  margin-bottom: 40px;*/
+  padding: 0 0 40px 0;
+  position: relative;
+  color: #808080;
+  background-color: #E0E0E0;
+/*  max-height: 300px;
+*/}
+
+.inner-sponsor-tab-footer{
+  padding:1em;
+}
+
+.contact address {
+  padding:0em 3em;
+  font-size: 18px;
+  color: #E05113;
+  margin: 20px 2em 0em ;
+}
+
+.contact img  {
+  width: 24px;
+/*  height: auto;*/
+  opacity: 0.4;
+  color: #E05113;
+  
+/*  transform: translateY(-5%);*/
+
+}
+
+.address1 address {
+/*  padding:0em 3em;*/
+  font-size: 16px;
+  color: #4D4D4D;
+  
+  margin: 0 0em 1em ;
+}
+.contact .social {
+  max-width: 30px;
+}
+
+#facebook-contact {
+  width: 24px;
+/*  height: auto;*/
+/*  opacity: 0.4;*/
+  fill: #E05113;
+  
+/*  transform: translateY(-5%);*/
+
+}
+
+.copyright {
+  position: relative;
+  color: #808080;
+  background-color: #000000;
+  
+}
+
+.copyright a {
+  color: #808080;
+  
+}
+

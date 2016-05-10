@@ -13,15 +13,13 @@
   
   
   <header>
-    <div class="large-12 columns language_bar"> <img src=/assets/facebook.svg> <img src=/assets/facebook.svg> CONTACTA / NOTICIAS | CAT EN </div>
-    
-    <div class="large-4 columns">foo</div>
-    <div class="large-8 columns">bar</div>
+    <div class="large-12 columns language-bar"> <img src=/assets/facebook.svg> <img src=/assets/facebook.svg> CONTACTA / NOTICIAS | CAT EN </div>
+
   </header>
   <body>
     <div class="large-12 columns">
       <div class="large-4 columns">
-        <img class='img-responsive' src=/assets/logo-bpde.svg>
+        <img class='main-logo img-responsive' src=/assets/logo-bpde.svg>
       </div>
       <div class="large-8 columns">  
         {{> common/navigation_bar}}
@@ -38,24 +36,24 @@
     <div class="large-2 columns">
       barzzo
     </div>
-    <!--
-    <div class='sponsor-tab'>
+    <div class='large-12 columns sponsor-tab-footer'>
       <div >
-        <div class='row hidden-xs hidden-sm '>      
-          {{> common/sponsors}}
-        </div>
-        <div class='row hidden-xs hidden-sm '>      
-          {{> common/sponsors_others}}
-        </div>
-        <hr>
         <div class='col-xs-12 col-md-12'>
           {{> common/contact_front_page}}
         </div>
+        <!-- <div class='row hidden-xs hidden-sm '>
+          {{> common/sponsors}}
+        </div>
+        <div class='row hidden-xs hidden-sm '>
+          {{> common/sponsors_others}}
+        </div>
+        <hr>
+         -->
+        
       </div>
     </div>
-    -->
   </body>
-  <footer class="large-12 columns">
+  <footer class="copyright large-12 columns">
     <nav class="">
       <div >
         <ul class="">
@@ -66,5 +64,5 @@
   </footer>
 </html>
 <script type="text/javascript" src="/assets/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/assets/foundation-sites/dist/foundation.js"></script>
+<script type="text/javascript" src="/assets/foundation.min.js"></script>
 <script>$(document).foundation();</script>
