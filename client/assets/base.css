@@ -2,6 +2,10 @@ html {
   margin: 0px 0px 0px 0px;
 }
 
+body {
+  font-family: 'tradegothicltcom-bd2', sans-serif;
+}
+
 header {
   padding: 0 0 4em;
 }
@@ -50,10 +54,15 @@ header {
 }
 
 .contact address {
+  
   padding:0em 3em;
   font-size: 18px;
   color: #E05113;
   margin: 20px 2em 0em ;
+}
+
+.contact #phones {
+  font-weight: bold;
 }
 
 .contact img  {
@@ -77,6 +86,11 @@ header {
   max-width: 30px;
 }
 
+#twitter-contact {
+  width: 24px;
+  fill: #E05113;
+  
+}
 #facebook-contact {
   width: 24px;
 /*  height: auto;*/
@@ -99,3 +113,51 @@ header {
   
 }
 
+
+.article-top-image {
+  background-color: #000000;
+  
+  width: 1280px;
+  height:400px;
+}
+
+.main-sponsors {
+  font-size: 18px;
+  color: #E05113;
+  
+  margin: 20px 0px 0px 0px;
+  
+}
+.main-sponsors h3{
+  font-weight: bold;
+  font-size: 28px;
+  margin: 0px 0px 20px 0px;
+  
+}
+.main-sponsors img {
+  height: 55px;
+  opacity: 0.4;
+   
+}
+
+.secondary-sponsors {
+  margin: 0px 0px 0px 0px;
+  height: 55px;
+  opacity: 0.4;
+  
+}
+
+.secondary-sponsors-line {
+  margin: 30px 0px 0px 0px;
+}
+
+.secondary-sponsors-line img {
+  margin: 0px 20px 0px 0px;
+  
+  height: 30px;
+  filter: grayscale(100%);
+}
+
+.sponsor {
+  margin: 0px -20px 0px 0px;
+}
