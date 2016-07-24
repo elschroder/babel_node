@@ -79,6 +79,29 @@ float: left;
   
 }
 
+.project-list {
+  height:400px;
+  
+}
+.project-list img {
+  height:200px;
+  width: 300px;
+}
+.project-list h6 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.project-list .description {
+  font-size: 14px;
+}
+
+.project-list .location {
+  font-size: 14px;
+  color: #E05113;
+  
+}
+
 
 .underline-title {
   font-weight: bold;
