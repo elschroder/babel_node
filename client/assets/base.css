@@ -35,6 +35,20 @@ h5 {
   color: #E05113;
 }
 
+/*patronato*/
+div.img-div{
+    height:150px;
+    width:150px;
+    overflow:hidden;
+/*    border-radius:100%;*/
+}
+
+.patronato img {
+/*  max-width: 150px;*/
+/*  max-height: 150px;*/
+/*  overflow:hidden;*/
+}
+
 .underline-title {
   font-weight: bold;
   color: #4C4C4C;

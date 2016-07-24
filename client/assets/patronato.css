@@ -1,0 +1,95 @@
+#andreu {
+  height: auto; 
+  width: auto;  
+  max-width: 150px; 
+  transform:translate(-0%);
+  margin-top: -20px;
+}
+
+#ferran-sans {
+  height: auto; 
+  width: auto;  
+  max-width: 150px; 
+  transform:translate(-0%);
+  
+  margin-top:0;
+}
+
+#maria-teresa {
+  margin-top: -70px;
+  height: auto; 
+  width: auto;  
+  max-width: 300px; 
+  transform:translate(-40%);
+  
+}
+
+#eila {
+  height: auto; 
+  width: auto;  
+  max-width: 200px; 
+  transform:translate(-60%);
+  
+  margin-top:0;
+}
+#felix-castillo {
+  height: auto; 
+  width: auto;  
+  max-width: 150px;      
+  transform:translate(0%);
+  margin-top:-10px;
+}
+
+#mireia {
+  height: auto; 
+  width: auto;  
+  max-width: 150px; 
+/*  zoom: 100%;*/
+/*  transform:translate(-65%);*/
+/*  margin-top:-00px;*/
+}
+
+#carlos {
+ height: auto; 
+ width: auto;  
+ min-width: 150px; 
+/* transform:translate(-60%);*/
+/* margin-top:-0px;*/
+}
+
+#josep {
+  height: auto; 
+  width: auto;  
+  min-width: 150px; 
+/*  transform:translate(-60%);*/
+  margin-top:0;
+}
+#borja-sans {
+  height: auto; 
+  width: auto;  
+  max-width: 200px; 
+  transform:translate(-20%);
+/*  margin-top:-30px;*/
+}
+#ignacio-sans {
+  height: auto; 
+  width: auto;  
+  max-width: 200px; 
+  transform:translate(-15%);
+  margin-top:-20px;
+}
+#fernando-paniagua {
+  height: auto; 
+  width: auto;  
+  max-width: 700px; 
+  transform:translate(-53.5%);
+  margin-top:-55px;
+}
+
+#juan-ignasio-sans {
+  height: auto; 
+  width: auto;  
+  max-width: 300px; 
+  transform:translate(-22.5%);
+  margin-top:-60px;
+}
