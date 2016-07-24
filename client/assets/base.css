@@ -9,24 +9,75 @@ body {
 header {
   padding: 0 0 4em;
 }
+
 .main-logo {
   max-height: 40px;
 }
 
+h3 {
+  color: #E05113;
+  font-size: 36px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 21px;
+  color: #4C4C4C;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #4C4C4C;  
+}
+
+.patronato h5 {
+  color: #E05113;
+}
+
+.underline-title {
+  font-weight: bold;
+  color: #4C4C4C;
+}
+
+.underline-title:after {
+    background-color: #E05113;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: bottom;
+    width: 100%;
+}
+.underline-title:after {
+/*    left: 1em;*/
+    margin-right: 0%;
+}
+
+.interactive-area {
+  padding: 0 60px 0 60px;  
+}
+
+.splash-zone {
+  padding: 0 0 60px 0;  
+}
+
+.summaries {
+  font-size: 16px;
+}
+
+.menu-bar {
+  padding: 0 0 40px 0;  
+}
 
 .language-bar {
   padding: 8px 4em 8px 0px;
   margin: 0px 0px 20px 0px;
-  
   top: 0;
   text-align: right;
   font-size: 14px;
   position: relative;
-  /*top: 50%;
-  transform: translateY(50%);
-*/
   color: #808080;
-  
   background-color: #E0E0E0;
 }
 
@@ -34,9 +85,6 @@ header {
   width: 24px;
   height: auto;
   opacity: 0.4;
-  
-/*  transform: translateY(-5%);*/
-
 }
 
 .sponsor-tab-footer {
@@ -55,10 +103,10 @@ header {
 
 .contact address {
   
-  padding:0em 3em;
+  padding: 0em 0em;
   font-size: 18px;
   color: #E05113;
-  margin: 20px 2em 0em ;
+  margin: 20px 0em 20px ;
 }
 
 .contact #phones {
@@ -82,8 +130,21 @@ header {
   
   margin: 0 0em 1em ;
 }
-.contact .social {
-  max-width: 30px;
+.contact .contact-social-icons {
+  vertical-align:top;
+  
+}
+
+.contact-social-buttons {
+  padding: 0 60px 0 60px;
+  
+}
+
+.contact .contact-social-icons .contact-social-icon {
+  
+  height: 30px;
+  text-align: left;
+  
 }
 
 #twitter-contact {
@@ -96,9 +157,8 @@ header {
 /*  height: auto;*/
 /*  opacity: 0.4;*/
   fill: #E05113;
+  margin: -20px -3em 0em ;
   
-/*  transform: translateY(-5%);*/
-
 }
 
 .copyright {
@@ -112,7 +172,6 @@ header {
   color: #808080;
   
 }
-
 
 .article-top-image {
   background-color: #000000;
