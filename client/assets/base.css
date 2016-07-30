@@ -10,6 +10,36 @@ header {
   padding: 0 0 4em;
 }
 
+
+.menu  {
+  border: 0px;
+  font-weight: bold;
+  font-size: 18px;
+  
+/*  background:#E05113;*/
+} 
+
+.sub-menu li {
+    background:#E05113;
+  
+}
+
+
+.menu a{
+  color:#E05113;
+  
+}
+.sub-menu a {
+ color:white;
+  
+}
+
+/*remove arrow from menu*/
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-width: 0px;
+  
+}
+
 .main-logo {
   max-height: 40px;
 }
@@ -130,12 +160,26 @@ float: left;
   padding: 0 0 60px 0;  
 }
 
+.splash-full-image {
+  height: 400px;
+  overflow: hidden;
+  
+}
+
+#splash-estrutura {
+  transform:translateY(-33.5%);
+  
+}
+
+
 .summaries {
   font-size: 16px;
 }
 
 .menu-bar {
-  padding: 0 0 40px 0;  
+  padding: 0 0 0px 0;
+  margin: 0px 0px -20px 0px;
+  
 }
 
 .language-bar {
