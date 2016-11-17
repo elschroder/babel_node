@@ -19,18 +19,17 @@
   margin-top: -70px;
   height: auto; 
   width: auto;  
-  max-width: 300px; 
-  transform:translate(-40%);
+  max-width: 250px; 
+/*  transform:translate(-40%);*/
   
 }
 
 #eila {
+  margin-top: -20px;
   height: auto; 
   width: auto;  
   max-width: 200px; 
-  transform:translate(-60%);
-  
-  margin-top:0;
+  transform:translate(-12%);  
 }
 #felix-castillo {
   height: auto; 
