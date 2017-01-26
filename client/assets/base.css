@@ -21,9 +21,7 @@ header {
 
 .sub-menu li {
     background:#E05113;
-  
 }
-
 
 .menu a{
   color:#E05113;
@@ -110,12 +108,20 @@ float: left;
 }
 
 .project-list {
-  height:400px;
+/*  height:400px;*/
   
 }
+
+.project-item {
+  min-height: 400px;
+/*  height: 400px;*/
+}
+.project-item-buttons {
+  position:bottom;
+}
 .project-list img {
-  height:200px;
-  width: 300px;
+/*  max-height: 200px;*/
+/*  max-width: 300px;*/
 }
 .project-list h6 {
   font-size: 18px;
