@@ -36,14 +36,24 @@ header {
 
 }
 */
-.sub-menu li {
+.menu .sub-menu {
+  min-width: 300px;
+/*  margin: 30px;*/
+}
+.menu .sub-menu li {
     background:#E05113;
     margin:0px;
 }
 
 .menu a{
   color:#E05113;
-  
+}
+
+.menu .sub-menu a {
+  min-width: 180px;
+  padding: 1em;
+/*  float:left;*/
+/*  min-height: 20px;*/
 }
 .sub-menu a {
  color:white;
