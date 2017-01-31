@@ -336,7 +336,7 @@ float: left;
 .sponsor-tab-footer {
   margin-top: 80px;
 /*  margin-bottom: 40px;*/
-  padding: 0 0 40px 0;
+  padding: 40px 0 40px 0;
   position: relative;
   color: #808080;
   background-color: #E0E0E0;
@@ -344,7 +344,9 @@ float: left;
 */}
 
 .inner-sponsor-tab-footer{
-  padding:1em;
+  padding-top:1em;
+/*  border-style: solid;*/
+/*  border-right: 1px;*/
 }
 
 .margin-left {
@@ -352,7 +354,7 @@ float: left;
 }
 
 .margin-right {
-  padding: 0 200px 0 0;
+  padding: 0 100px 0 0;
 }
 
 .contact address {
@@ -363,6 +365,24 @@ float: left;
   margin: 20px 0em 20px ;
 }
 
+.v-separator
+{
+    padding: 10em;
+    padding-top:0px;
+  
+    margin: -1px;
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 30%;
+    border-left: 0.5px solid #ACACAC;
+    padding: 0;
+}
+
+.sponsors {
+  padding-top:0px;
+  padding-left:30px;
+}
 .sponsor-tab-footer .vertical-splitter {
   border-left: thick solid #ff0000;
   
@@ -374,7 +394,7 @@ float: left;
 }
 
 .contact img  {
-  width: 24px;
+  width: 35px;
 /*  height: auto;*/
   opacity: 0.4;
   color: #E05113;
@@ -400,17 +420,40 @@ float: left;
   
 }
 
+
+
 .contact .contact-social-icons .contact-social-icon {
-  
   height: 30px;
-  text-align: left;
+/*  text-align: left;*/
   
 }
 
-#twitter-contact {
-  width: 24px;
-  fill: #E05113;
+.contact-social-icon img {
+  width: 45px;
+  height: auto;
+  opacity: 0.4;
+  margin-right:1em;
   
+}
+
+.contact-social-icon svg {
+  
+  width: 35px;
+/*  height: auto;*/
+/*  opacity: 0.4;*/
+/*  position: relative;*/
+  
+  margin-bottom: -15px;
+  margin-right: 10px;
+  
+  fill: #E05113;  
+
+}
+
+#twitter-contact-orange {
+/*  width: 24px;*/
+  fill: #94d31b; 
+  fill: #E05113;  
 }
 #facebook-contact {
   width: 24px;
