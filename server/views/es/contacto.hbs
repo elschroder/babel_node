@@ -1,18 +1,26 @@
 <title>Contacto</title>
-<div>
-  <h3>Nuestra dirección (provisional): </h3>
+<div class="large-12 columns splash-zone">
+  <div>
+    {{#if locals.is_desktop}}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5987.038552274107!2d2.131761!3d41.384528!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49863b722df89%3A0x8f483dc3ffe754c0!2sTravessera+de+les+Corts%2C+228%2C+08028+Barcelona%2C+Spain!5e0!3m2!1sen!2suk!4v1488839205072" width="1000" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    {{/if}}
+  </div>
+</div>
+<div class="large-5 columns page-copywrite">
+  <h4>DIRECCIÓN (PROVISIONAL): </h4>
   <address>
     Travessera de les Corts, 228 bis, Entresol 3ª<br>
     08028 Barcelona<br>
-    <br>
-    {{#if isEs}}<strong>Estación de Metro</strong>:{{/if}}{{#if isCat}}<strong>Estació de Metro</strong>:{{/if}}{{#if isEn}}<strong>Metro</strong>: {{/if}}
-    <br>
-    Les Corts (<strong>L3</strong>)
+    {{#if isEs}}<div>Estación de Metro:</div>{{/if}}{{#if isCat}}<strong>Estació de Metro</strong>:{{/if}}{{#if isEn}}<strong>Metro</strong>: {{/if}}
+    Les Corts (L3)
   </address>
+  <br>
   <address>
-    <strong>Horario</strong>:<br>  <strong>Lunes</strong>: 10-14h, 15-19h. <br> <strong>Martes</strong> a <strong>Jueves</strong>: 10-14h.
+    <h4>Horario:</h4>Lunes: 10-14h, 15-19h. Martes a Jueves: 10-14h.
     <br> Horario de atenciones, toda la semana con cita previa.
   </address>
+</div>
+<div class="large-4 columns page-copywrite">
   <h4>Teléfonos:</h4>
   <address>
   93 295 57 93 <br>
@@ -20,10 +28,5 @@
   </address>  
   <h4>E-mail:</h4>
   <address>info@babelpuntodeencuentro.org</address>
-  <h3>Mapa:</h3>
-  <div>
-    {{#if locals.is_desktop}}
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.5192724879853!2d2.129572715332912!3d41.38452807926442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49863b722df89%3A0x8f483dc3ffe754c0!2sTravessera+de+les+Corts%2C+228%2C+08028+Barcelona%2C+Spain!5e0!3m2!1sen!2suk!4v1446546720723" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    {{/if}}
-  </div>  
 </div>
+{{> common/side-menu-donation}}

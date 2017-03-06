@@ -206,7 +206,7 @@ float: left;
 }
 
 .project-item {
-  border-style:solid;
+/*  border-style:solid;*/
   padding:0;
 /*  min-height: 320px;*/
   height: 320px;
