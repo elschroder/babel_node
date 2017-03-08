@@ -152,9 +152,20 @@ h5 {
   margin-bottom: 20px;
 }
 
+.more-content a {
+  font-weight: bold;
+  color: #E05113;
+  font-size: 13px;
+  float:right;
+}
 .noticias h5 {
   color: #E05113;
 }
+
+.noticias a {
+  color: #E05113;
+}
+
 
 /*noticias*/
 div.img-div{
@@ -272,6 +283,11 @@ float: left;
   width: 240px;
 /*  width:100%;*/
   margin: 5px;
+}
+
+.project-item img {
+  display:block;
+  margin:auto;
 }
 
 .project-item .empty {
