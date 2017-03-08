@@ -152,6 +152,64 @@ h5 {
   margin-bottom: 20px;
 }
 
+.noticias h5 {
+  color: #E05113;
+}
+
+/*noticias*/
+div.img-div{
+/*    max-height:150px;*/
+    max-width:350px;
+    overflow:hidden;
+/*    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);*/
+/*    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);*/
+/*    box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);*/
+    
+/*    border-radius:100%;*/
+    margin-bottom:10px;
+}
+
+.noticias img {
+  float: left;
+/*  display: block;*/
+/*  filter: grayscale(100%);*/
+  
+  width: 350px;
+/*  max-height: 150px;*/
+  overflow:hidden;
+}
+.noticias .element {
+/*  height: 170px;*/
+/*  margin: 20px 20px 0 0;*/
+/*  border: 5px solid #333;*/
+/*  overflow: auto*/
+  
+}
+
+.noticias h4 {
+  margin-bottom: 10px;
+}
+
+.noticias .element div.img-div{
+
+float: left;
+
+}
+.noticias .element div.img-div img{
+
+/*  display: block*/
+
+}
+
+.noticias .element .description-photos{
+  margin-left: 180px
+}
+.noticias .element .description-text{
+  margin-left: 10px
+}
+
+
+
 
 .patronato h5 {
   color: #E05113;
@@ -159,7 +217,7 @@ h5 {
 
 /*patronato*/
 div.img-div{
-    height:150px;
+/*    height:150px;*/
     width:150px;
     overflow:hidden;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);
@@ -259,6 +317,14 @@ float: left;
 /*  width:100%;*/
   max-height: 160px;
 /*  max-width: 300px;*/
+}
+
+
+.project-list-text img {
+/*  width:100%;*/
+  max-height: 300px;
+/*  max-width: 300px;*/
+  margin: 0px 10px 10px 0px;
 }
 .project-list h6 {
   margin-top: 10px;

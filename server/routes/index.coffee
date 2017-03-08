@@ -11,14 +11,18 @@ module.exports = (app) ->
   app.route '/'
     .get contentController.index
   
+  
   app.route "/:language/"
     .get contentController.get
-
-  app.route "/:language/noticies/"
-    .get newsController.index
   
-  app.route "/:language/noticias/"
+  app.route "/:language/home"
     .get newsController.index
+
+  # app.route "/:language/noticies/"
+#     .get newsController.index
+#
+#   app.route "/:language/noticias/"
+#     .get newsController.index
   
   app.route "/:language/news/"
     .get newsController.index

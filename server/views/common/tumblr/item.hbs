@@ -1,22 +1,41 @@
-
-<hr>
-<h2><a href={{#if isEs}}"/es/n/{{id}}"{{/if}}{{#if isCat}}"/cat/n/{{id}}"{{/if}}{{#if isEn}}"/en/n/{{id}}"{{/if}}>{{title}}</a></h2>
-{{#if isPhoto}}
-  <div>{{{caption_summary}}}</div>
-  <div>
-  {{#each photos}}
-    <a href="{{original_size.url}}"target='_blank'><img class='img-responsive' src={{picked_size.url}}></a>
-  {{/each}}
+<div>
+  {{#if isPhoto}}
+  <div class="noticias">
+    <div class="element">
+      <div class='img-div'>
+        {{#each photos}}          
+        <div>
+          <a href="{{original_size.url}}"target='_blank'>
+            <img class='img-responsive' src={{picked_size.url}}>
+          </a>
+        </div>
+        {{/each}}
+      </div>
+      <div></div>
+      <div class="description-photos">
+        <h5><a href='/{{language}}/n/{{id}}'>{{title}}</a></h5>
+        <div><em>{{date}}</em></div>
+        <div>{{{caption_summary}}}</div>
+      </div>
+    </div>
+    <!-- <h4 class="underline-grey"> </h4> -->
+    <hr>
   </div>
-{{/if}}
-{{#if isText}}
-  <div>{{{body_summary}}}</div>
-{{/if}}
-<hr>
-<div> <em>{{date}}</em>
-<a href={{#if isEs}}"/es/n/{{id}}"{{/if}}{{#if isCat}}"/cat/n/{{id}}"{{/if}}{{#if isEn}}"/en/n/{{id}}"{{/if}}> <em> 
-  {{#if isEs}}(leer más...){{/if}}{{#if isCat}}(llegir més...){{/if}}{{#if isEn}}(read more...){{/if}}
-  </em></a>
+  {{/if}}    
+  {{#if isText}}
+    <div class="noticias">
+      <div class="element-text">
+        <div class="description-text">
+        <h5><a href='/{{language}}/n/{{id}}'>{{title}}</a></h5>
+
+          <div><em>{{date}}</em></div>
+          <div class="project-list-text">{{{body}}}</div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  {{/if}}
 </div>
+    
 
   
