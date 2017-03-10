@@ -1,2 +1,9 @@
 <title>Noticias</title>
-{{> common/tumblr/list}}
+
+<div class="large-3 columns news"> <h4 class="underline-title">{{#if isEn}}News{{/if}}{{#if isEs}}<a href="/es/noticias">Noticias</a>{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
+ </div>
+<div class="large-6 columns project-list">
+  {{> common/tumblr/list}}
+</div>
+<!-- <div class="large-3 columns "> </div> -->
+{{> common/side-menu-donation}}

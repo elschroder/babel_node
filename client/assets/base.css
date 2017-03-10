@@ -166,7 +166,26 @@ h5 {
   color: #E05113;
 }
 
-
+.news h4 {
+  color: #E05113;
+}
+.news h4 a {
+  color: #E05113;
+}
+.news-item h5 {
+  color: #E05113;
+}
+.news-item h6 {
+  font-weight: lighter;
+  color: #4C4C4C;
+  font-size: 10px;
+  
+}
+.news-item img {
+  display:block;
+  margin:auto;
+  margin-bottom: 20px;
+}
 /*noticias*/
 div.img-div{
 /*    max-height:150px;*/
@@ -365,6 +384,11 @@ float: left;
   
 }
 
+.news-item h6 {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
 .underline-title {
   font-weight: bold;

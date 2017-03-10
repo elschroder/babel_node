@@ -37,7 +37,7 @@ setSummary = (post, language) ->
 
 setDate = (post, language) ->
   language = 'ca' if language == 'cat'
-  post.date = Moment(post.timestamp, 'X').tz("Europe/Madrid").locale("#{language}").format('LLL')
+  post.date = Moment(post.timestamp, 'X').tz("Europe/Madrid").locale("#{language}").format('LL')
 
 setType = (post) ->
   post.isText = true if post.type == 'text'

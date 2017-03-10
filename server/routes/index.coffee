@@ -1,5 +1,6 @@
 contentController = require "../controllers/content_controller"
 newsController = require "../controllers/news_controller"
+homeController = require "../controllers/home_controller"
 
 module.exports = (app) ->
   
@@ -16,16 +17,16 @@ module.exports = (app) ->
     .get contentController.get
   
   app.route "/:language/home"
-    .get newsController.index
+    .get homeController.index
 
   # app.route "/:language/noticies/"
 #     .get newsController.index
 #
-#   app.route "/:language/noticias/"
-#     .get newsController.index
-  
-  app.route "/:language/news/"
+  app.route "/:language/noticias/"
     .get newsController.index
+  
+  # app.route "/:language/news/"
+#     .get newsController.index
   
   app.route "/:language/n/:id"
     .get newsController.get

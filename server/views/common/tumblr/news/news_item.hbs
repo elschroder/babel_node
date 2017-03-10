@@ -1,23 +1,33 @@
 <title>{{#if isEs}}Noticias{{/if}}{{#if isCat}}Noticies{{/if}}{{#if isEn}}News{{/if}} • {{post_item.title}}</title>
-<h2>{{post_item.title}}</h2>
-{{#if post_item.isPhoto}}
+
+<div class="large-3 columns news"> <h4 class="underline-title">{{#if isEn}}News{{/if}}{{#if isEs}}<a href="/es/noticias">Noticias</a>{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
+</div>
+<div class="large-6 columns news-item">
+  <!-- <hr> -->
+  <h5>{{post_item.title}}</h5>
+  <h6><em>{{post_item.date}}</em> | Fundación Babel Punto de Encuentro</h6>
   <div>{{{post_item.caption}}}</div>
-  <div>
   {{#each post_item.photos}}
     <a href="{{original_size.url}}" target='_blank'><img class='img-responsive' src={{picked_size.url}}></a>
   {{/each}}
-  </div>
-{{/if}}
-{{#if post_item.isText}}
+  {{#if post_item.isPhoto}}
+    <!-- <h1>photo </h1> -->
+    <!-- <div></div> -->
+  {{/if}}
+  {{#if post_item.isText}}
+    <!-- <h1>text </h1> -->
   <div>{{{post_item.body}}}</div>
-{{/if}}
-<hr>
-<div><em>{{post_item.date}}</em></div>
-  
-<hr>
+  {{/if}}
+  <h5 class="more-content">
+    <a href={{#if isEs}}"/es/noticias/"{{/if}}{{#if isCat}}"/cat/noticies/"{{/if}}{{#if isEn}}"/en/news/"{{/if}}>
+  {{#if isEs}}Volver a noticias{{/if}}{{#if isCat}}Tornar a les notícies{{/if}}{{#if isEn}}Back to news{{/if}}</em>
+    </a>
+  </h5>
+</div>
+{{> common/side-menu-donation}}
 
-<a href={{#if isEs}}"/es/noticias/"{{/if}}{{#if isCat}}"/cat/noticies/"{{/if}}{{#if isEn}}"/en/news/"{{/if}}>
-  {{#if isEs}}Volver a noticias{{/if}}{{#if isCat}}Tornar a les notícies{{/if}}{{#if isEn}}Back to news{{/if}}
-</em></a>
+
+
+    
 
   
