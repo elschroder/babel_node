@@ -322,6 +322,49 @@ float: left;
 /*  float: bottom;*/
 }
 
+#coaching-social-empty-space  {
+  margin-top: 71px;
+/*  margin-top: 9em;*/
+/*  position:relative;*/
+/*  float: bottom;*/
+}
+
+#casa-acogida-empty-space  {
+  margin-top: 35px;
+/*  margin-top: 9em;*/
+/*  position:relative;*/
+/*  float: bottom;*/
+}
+
+#micro-proyectos-empty-space  {
+  margin-top: -5px;
+/*  margin-top: 9em;*/
+/*  position:relative;*/
+/*  float: bottom;*/
+}
+
+#centro-femenino-empty-space  {
+  margin-top: 34px;
+/*  margin-top: 9em;*/
+/*  position:relative;*/
+/*  float: bottom;*/
+}
+
+#colonias-verano-empty-space  {
+  margin-top: 34px;
+/*  margin-top: 9em;*/
+/*  position:relative;*/
+/*  float: bottom;*/
+}
+
+#becas-escolarizacion-empty-space  {
+  margin-top: 35px;
+/*  margin-top: 9em;*/
+/*  position:relative;*/
+/*  float: bottom;*/
+}
+
+
 .project-item .project-item-buttons {
   
 /*  position: relative;*/
