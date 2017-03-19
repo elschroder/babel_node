@@ -14,6 +14,7 @@ body {
   max-width: 1261px;
   
 }
+
 header {
   padding: 0 0 4em;
 }
@@ -92,10 +93,6 @@ h5 {
   font-weight: bold;
   font-size: 16px;
   color: #4C4C4C;  
-}
-
-.page-copywrite {
-  
 }
 
 .side-menu-donation {
@@ -189,27 +186,42 @@ h5 {
   margin-bottom: 20px;
 }
 /*noticias*/
-div.img-div{
+.news div.news-img-div{
 /*    max-height:150px;*/
-    max-width:350px;
-    overflow:hidden;
+/*    max-width:150px;*/
+/*    overflow:hidden;*/
 /*    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);*/
 /*    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);*/
 /*    box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);*/
     
 /*    border-radius:100%;*/
-    margin-bottom:10px;
 }
 
+.noticias div.news-img-div{
+    height:150px;
+    width:150px;
+    overflow:hidden;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);
+    margin-bottom:10px;
+    
+/*    border-radius:100%;*/
+}
+.noticias div.news-img-div .img-responsive {
+  margin-bottom:100px;
+}
+ 
 .noticias img {
   float: left;
 /*  display: block;*/
 /*  filter: grayscale(100%);*/
-  
-  width: 350px;
+
+/*  width: 350px;*/
 /*  max-height: 150px;*/
   overflow:hidden;
 }
+
 .noticias .element {
 /*  height: 170px;*/
 /*  margin: 20px 20px 0 0;*/
@@ -247,10 +259,12 @@ float: left;
   color: #E05113;
 }
 
+
+
 /*patronato*/
-div.img-div{
-/*    height:150px;*/
-    width:150px;
+.patronato div.img-div{
+    height:150px;
+    max-width:150px;
     overflow:hidden;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);
@@ -476,7 +490,6 @@ float: left;
   
 }
 
-
 .summaries {
   font-size: 16px;
 }
@@ -645,15 +658,17 @@ float: left;
 
 .copyright {
 /*  position: relative;*/
-/*  padding-top:1e;*/
-  color: #808080;
-  background-color: #000000;
+  padding-top:-1em;
+  font-size: 14px;
+  padding: 0 0 0 80px;
+/*  color: #808080;*/
+  color: #E05113;
+  background-color: #E0E0E0;
   
 }
 
 .copyright a {
   color: #808080;
-  
 }
 
 .copyright ul {
