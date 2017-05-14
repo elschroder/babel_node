@@ -1,0 +1,54 @@
+.menu  {
+  border: 0px;
+  font-weight: bold;
+  font-size: 14px;
+} 
+
+.menu li {
+  max-width: 100%;
+  max-width: 240px;
+  text-align:center;
+  margin: 0px;
+  
+}
+
+/*.dropdown .menu ul {
+  padding:0px;
+
+}
+*/
+.menu .sub-menu {
+  min-width: 300px;
+/*  margin: 30px;*/
+}
+.menu .sub-menu li {
+    background:#E05113;
+    margin:0px;
+}
+
+.menu a{
+  color:#E05113;
+}
+
+.menu .sub-menu {
+  transform:translateX(-50.5%);
+  
+}
+
+.menu .sub-menu a {
+  
+  min-width: 180px;
+  padding: 1em;
+/*  float:left;*/
+/*  min-height: 20px;*/
+}
+.sub-menu a {
+ color:white;
+  
+}
+
+/*remove arrow from menu*/
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-width: 0px;
+  
+}
