@@ -7,7 +7,7 @@ module.exports = (app) ->
   app.route '/robots.txt'
     .get (req, res) ->
       res.type('text/plain') 
-      res.send("User-agent: *\nDisallow: /")  
+      res.send("User-agent: *\nDisallow: /assets/")  
       
   app.route '/'
     .get contentController.index
