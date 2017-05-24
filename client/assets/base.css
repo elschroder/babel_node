@@ -8,11 +8,14 @@ body {
   
 }
 
-.lateral-padding {
-  margin: auto;
-  padding: 0px 100px 0px 100px;
-  max-width: 1261px;
+@media screen and (min-width: 800px) {
+/*    // this css will only be used when the screen size is min 800px*/    
+  .lateral-padding {
+      margin: auto;
+      padding: 0px 100px 0px 100px;
+      max-width: 1261px;
   
+    }
 }
 
 header {
@@ -86,7 +89,6 @@ h5 {
 
 #splash-estrutura {
   transform:translateY(-33.5%);
-  
 }
 
 .summaries {
@@ -111,9 +113,7 @@ h5 {
 }
 
 .language-bar a{
-  color: #808080;
-/*  background-color: #E0E0E0;*/
-  
+  color: #808080;  
 }
 
 .proyectos-title {
@@ -143,6 +143,7 @@ h5 {
 /*  border-right: 1px;*/
   margin-bottom:6em;
 }
+
 
 .margin-left {
   padding: 0 0 0 100px;

@@ -24,6 +24,7 @@
   </header>
   <body>
     <div class="lateral-padding">
+      {{#if is_desktop}}
       <div class="large-12 columns menu-bar">
         <div class="large-4 columns">
           <a href="/">
@@ -34,13 +35,31 @@
           {{> common/navigation_bar}}
         </div>
       </div>
+      {{else}}
+      <div class="large-12 columns menu-bar">
+        <div class="large-4 columns">
+          <a href="/">
+            <img class='main-logo img-responsive' src=/assets/logo-bpde.svg>
+          </a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="large-8 columns">  
+          {{> common/navigation_bar}}
+        </div>
+      </div>
+      {{/if}}
+      
       <div class="large-12 columns interactive-area">
             {{{body}}}
       </div>
     </div>
+    {{#if is_desktop}} 
     <div class='large-12 columns sponsor-tab-footer'>
       {{> common/sponsors}}
     </div>
+    {{/if}}
   </body>
   <footer class="copyright large-12 columns ">
     <nav class="">
