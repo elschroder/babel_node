@@ -22,7 +22,7 @@ git push test foundation-layout:master
   - node
   - express
   - lodash
-### move from coffeescript to javascript 2015
+### move from coffeescript to javascript 2015/2016?
 
 ##HTML + CSS
 - css effects on red zone and project
