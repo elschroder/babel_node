@@ -6,12 +6,12 @@ LanguageId = require '../helpers/language'
 setTitle = (post) ->
   if post.type == 'photo' #if a post is of the type photo we need to create a title.
     caption = post.caption
-    console.log "===== setTitle ", post.caption
+    # console.log "===== setTitle ", post.caption
     caption = caption.replace(/\n/g, ' ')
     caption = caption.replace(/\s\s+/g, ' ') #removes any extra space
     splitCaption = /\<h2\>(.*?)\<\/h2\>/i.exec(caption)
     post.title = splitCaption?[1]?.replace(/<(.|\n)*?>/g, '')
-    console.log "post.title---",post.title 
+    # console.log "post.title---",post.title
     post.caption = caption.replace(splitCaption?[0],'')
 
 setScaledImages = (post) ->  #picks a smaller image and all tumblr links are redirected to https (the api does not allow this by default)
@@ -56,7 +56,7 @@ module.exports.prettyPrintPost = prettyPrintPost = (post, language) ->
   setScaledImages(post)
   setSummary(post, language)
   setDate(post, language)
-  console.log "post=\n", post, "\n==\n"
+  # console.log "post=\n", post, "\n==\n"
   
   post
   
