@@ -4,6 +4,7 @@
 node_modules
 pitxin-babel/
 .idea
+pitxin-babel/
 *.iml
 log/*.log
 log/*
