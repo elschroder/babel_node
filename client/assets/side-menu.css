@@ -1,0 +1,27 @@
+.side-menu-donation {
+  font-weight: bold;
+  font-size: 18px;
+  
+  padding: 0px 0px 0px 0px;
+  
+}
+.side-menu-donation .button {
+  float: right;
+  max-width: 300px;
+  width: 100%;
+  background-color:#E05113;
+/*  padding: 15px 0px 15px 0px;*/
+  margin-bottom: 20px;
+}
+
+.side-menu-donation .button-inverse {
+/*  float: right;*/
+  max-width: 300px;
+  width: 100%;
+  color:#E05113;
+  background-color: white;
+  border-style: solid;
+  border-color: #E05113;
+/*  padding: 15px 0px 15px 0px;*/
+  margin-bottom: 20px;
+}

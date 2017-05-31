@@ -1,17 +1,14 @@
-<div class='col-12'>
-  <h4 class='col-md-offset-1'>{{#if isEs }} Con el soporte de: {{/if}}{{#if isEn }} With the support of: {{/if}}{{#if isCat }} Amb el suport de: {{/if}}</h4>
-  <div class='col-md-offset-2  col-md-2'>
-    <a href='https://obrasocial.lacaixa.es/' width="80%" height="80%" target='_blank'><img class='img-responsive' src=/assets/logo-vector-obra-social-la-caixa.png></a>
-  </div>
-  <div class='col-md-2'>
-    <a href='http://ajuntament.barcelona.cat/ca/' width="80%" height="80%" target='_blank'><img class='img-responsive' src=/assets/logo-ajuntament-bcn.png></a>
-  </div>
-  <div class='col-md-2'>
-    <a href='http://www.diba.cat/' width="80%" height="80%" target='_blank'><img class='img-responsive' src=/assets/logo-diputacio-barcelona.png></a>
-  </div>
-  <div class='col-md-3'>
-    <a href='http://benestar.gencat.cat/ca/' width="80%" height="80%" target='_blank'><img class='img-responsive' src=/assets/logo-gen-cat-departament-benestar.png></a>
-  </div>
-</div>
-
-
+      <div>
+        <div class='large-5 columns margin-left'>
+          {{> common/contact_front_page}}
+        </div>
+        <div class="v-separator"></div>        
+        <div class="large-7 sponsors columns margin-right">
+          <div>
+            {{> common/sponsors-main}}
+            <hr>
+            {{> common/sponsors_others}}
+          </div>
+          
+        </div>
+      </div>

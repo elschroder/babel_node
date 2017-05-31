@@ -1,0 +1,26 @@
+.jumbotron {
+  margin-bottom:0;
+  background-color: #ee5b13; 
+}
+.visible-md-block, .visible-lg-block  {
+  color:white;
+}
+.sponsors-others img {
+  margin-bottom: 40px;
+}
+.sponsor-tab .container-fluid {
+ margin-top: 70px; 
+}
+
+
+div.img-div{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    border-radius:50%;
+}
+
+.img-div img{
+    -webkit-transform:translate(-50%);
+    margin-left:120px;
+}

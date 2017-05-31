@@ -1,7 +1,7 @@
 express = require 'express'
 exphbs = require 'express-handlebars'
 device = require 'express-device'
-favicon = require 'express-favicon'
+favicon = require 'serve-favicon'
 compression = require 'compression'
 config = require 'config'
 _ = require 'lodash'
@@ -15,7 +15,7 @@ exphbsConf = exphbs.create(
   #helpers: hbshelpers
   extname: '.hbs', 
   viewsDir: 'server/views/'
-  layoutsDir: 'server/views/layouts/dist'
+  layoutsDir: 'server/views/layouts'
   partialsDir: ['server/views/']
 )
 app.engine('.hbs', exphbsConf.engine)
@@ -39,6 +39,7 @@ deviceHelpers(app)
 
 app.use '/assets', express.static("client/assets", {maxAge: 31536000 * 1000}) #cache for 1 year
 app.use '/assets', express.static("client/dist", {maxAge: 31536000 * 1000}) #cache for 1 year
+app.use '/assets', express.static("bower_components", {maxAge: 31536000 * 1000}) #cache for 1 year
 app.use favicon("#{process.cwd()}/client/assets/favicon.ico") 
 
 app.use compression()

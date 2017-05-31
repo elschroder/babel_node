@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="/assets/foundation-flex.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/base.css">
+    <link rel="stylesheet" type="text/css" href="/assets/side-menu.css">
+    <link rel="stylesheet" type="text/css" href="/assets/patronato.css">
+    <link rel="stylesheet" type="text/css" href="/assets/noticias.css">
+    <link rel="stylesheet" type="text/css" href="/assets/menu.css">
+    <link rel="stylesheet" type="text/css" href="/assets/contact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/proyectos.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>  </head>
+  <!-- Optional theme -->
+  
+  <!-- Latest compiled and minified JavaScript -->
+  
+  
+  <header>
+    <!-- <div class="large-12 columns language-bar"> <a href="https://www.facebook.com/babelpde/" target="_blank"><img src=/assets/facebook.svg></a> <img src=/assets/twitter.svg> CONTACTA / NOTICIAS | CAT EN </div> -->
+    <div class="large-12 columns language-bar"> <a href="https://www.facebook.com/babelpde/" target="_blank"><img src=/assets/facebook.svg></a> <a href="https://twitter.com/fundacion_babel" target="_blank"><img src=/assets/twitter.svg></a> <a href="/es/contacto"> CONTACTA </a> / <a href="/es/noticias">NOTICIAS</a> </div>
+    
+  </header>
+  <body>
+    <div class="lateral-padding">
+      {{#if is_desktop}}
+      <div class="large-12 columns menu-bar">
+        <div class="large-4 columns">
+          <a href="/">
+            <img class='main-logo img-responsive' src=/assets/logo-bpde.svg>
+          </a>
+        </div>
+        <div class="large-8 columns">  
+          {{> common/navigation_bar}}
+        </div>
+      </div>
+      {{else}}
+      <div class="large-12 columns menu-bar">
+        <div class="large-4 columns">
+          <a href="/">
+            <img class='main-logo img-responsive' src=/assets/logo-bpde.svg>
+          </a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="large-8 columns">  
+          {{> common/navigation_bar}}
+        </div>
+      </div>
+      {{/if}}
+      
+      <div class="large-12 columns interactive-area">
+            {{{body}}}
+      </div>
+    </div>
+    {{#if is_desktop}} 
+    <div class='large-12 columns sponsor-tab-footer'>
+      {{> common/sponsors}}
+    </div>
+    {{/if}}
+  </body>
+  <footer class="copyright large-12 columns ">
+    <nav class="">
+      <div>
+        <ul class="">
+          <li><a href="/">Copyright © 2012-2017, BPDE - Fundación Babel Punto de Encuentro</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+</html>
+<script type="text/javascript" src="/assets/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/foundation.min.js"></script>
+<script>$(document).foundation();</script>

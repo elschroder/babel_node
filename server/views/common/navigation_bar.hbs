@@ -1,19 +1,90 @@
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id='bs-example-navbar-collapse-2' >
-            <div class="navbar-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <ul class="nav navbar-nav">
-                {{#if isEs}}{{> es/menu}}{{/if}}{{#if isCat}}{{> cat/menu}}{{/if}}{{#if isEn}}{{> en/menu}}{{/if}}
-              </ul>
-            </div>
+<header class="">
+      {{#if is_phone}}
+        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <!-- <div class="title-bar-title">XXXX</div> -->
+        </div>
+
+        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+          <div class="top-bar-right">
+            <ul class="vertical menu" data-drilldown>
+              <li>
+                <a href="#quienes-somos">QUIÉNES SOMOS</a>
+                <ul class="vertical menu">
+                  <li><a href="/es/quienes_somos">QUIÉNES SOMOS</a></li>
+                  <li><a href="/es/filosofia">FILOSOFIA</a></li>
+                  <li><a href="/es/transparencia">TRANSPARENCIA</a></li>
+                  <li><a href="/es/estructura">ESTRUCTURA</a></li>
+                  <!-- ... -->
+                </ul>
+              </li>
+              <li>
+                <a href="#que-hacemos">QUE HACEMOS</a>
+                <ul class="vertical menu">
+                  <li><a href="/es/proyectos">PROYECTOS</a></li>
+                  <li><a href="/es/noticias">NOTICIAS</a></li>
+                  <li><a href="https://babelpuntodeencuentro.wordpress.com/" target="_blank">BLOG</a></li>
+                  <!-- ... -->
+                </ul>
+              </li>
+              <li>
+                <a href="#que-puedes-hacer-tu">QUE PUEDES HACER TU</a>
+                <ul class="vertical menu">
+                  <li><a href="/es/dona">PARTICULARES</a></li>
+                  <li><a href="/es/dona">EMPRESAS</a></li>
+                  <li><a href="/es/voluntariado">VOLUNTARIADO</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
-      </nav>
+      {{else}}
+        
+        
+        
+        <div>
+        <ul class="menu align-right" data-menu>  
+          <ul class="dropdown menu align-right" data-dropdown-menu>
+            <li class="menu menu-index ">
+              <a>QUIÉNES SOMOS</a>
+              <ul class="menu sub-menu medium-horizontal">
+              <li><a href="/es/quienes_somos">QUIÉNES SOMOS</a></li>
+              <li><a href="/es/filosofia">FILOSOFIA</a></li>
+              <li><a href="/es/transparencia">TRANSPARENCIA</a></li>
+              <li><a href="/es/estructura">ESTRUCTURA</a></li>
+              <!-- <li><a href="/es/colaboradores">Colaboradores</a></li> -->
+              </ul>
+            </li>
+          </ul>
+          <ul class="dropdown menu align-right" data-dropdown-menu>
+            <li class="menu menu-index ">
+              <a>QUE HACEMOS</a>
+      
+              <ul class="menu sub-menu medium-horizontal ">
+              <li><a href="/es/proyectos">PROYECTOS</a></li>
+              <li><a href="/es/noticias">NOTICIAS</a></li>
+              <li><a href="https://babelpuntodeencuentro.wordpress.com/" target="_blank">BLOG</a></li>
+              <!-- <li><a href="/es/zona_roja">ZONA ROJA</a></li> -->
+              </ul>
+            </li>
+          </ul>
+          <!-- <li><a href="/es/noticias">Noticias</a></li> -->
+          <ul class="dropdown menu align-right" data-dropdown-menu>
+            <li class="menu menu-index">
+              <a>QUE PUEDES HACER TU</a>
+              <ul class="menu sub-menu medium-horizontal">
+              <li><a href="/es/dona">PARTICULARES</a></li>
+              <li><a href="/es/dona">EMPRESAS</a></li>
+              <li><a href="/es/voluntariado">VOLUNTARIADO</a></li>
+              </ul>
+            </li>
+          </ul>
+        </ul>
+        </div>
+
+      {{/if}}
+      
+      
+</header>
+
+

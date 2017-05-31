@@ -10,6 +10,7 @@ TumblrHelper = require '../helpers/tumblr'
 LanguageId = require '../helpers/language'
 
 module.exports.get = (req, res) ->
+  console.log "get req.stuff"
   language = req.params.language #if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'  
   opts = setOpts(req, res, language)
   
@@ -24,16 +25,20 @@ module.exports.get = (req, res) ->
   )
 
 module.exports.index = (req, res) ->
+  console.log "index req.stuff ", req.params
+  
   language = req.params.language #if _.contains(allowedLanguages, req.params.language) then req.params.language else 'es'
   opts = setOpts(req, res, language)
 
-  Tumblr.get(config.news.limit, (err, posts) ->
+  Tumblr.get(20, (err, posts) ->
     if !err && posts?.length > 0  
       _.each(posts, (post) ->
+        console.log post
         TumblrHelper.prettyPrintPost(post, language)
         )
       _.extend(opts, {tumblr_posts: posts})
-      template = "#{language}/#{newsTemplatesFP[language]}"
+      
+      template = "#{language}/#{newsTemplates[language]}"
       res.render(template, opts)
     else
       console.log "news index -> err",err
