@@ -8,7 +8,7 @@ describe 'GET /', () ->
   describe "hiting /", ->
     it "should be moved to a filename named home"
     it 'should return 301', (done) ->
-      console.log 'app',app.app
+      # console.log 'app',app.app
       server
       .get('/')
       .expect(301)

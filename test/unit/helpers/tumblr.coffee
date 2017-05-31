@@ -89,7 +89,7 @@ describe 'Unit Testing Tumblr Helper', () ->
   describe "A text tumblr post", () ->
     language = 'es'
     foo = TumblrHelper.prettyPrintPost(post_text_only,language)
-    console.log "foo", foo
+    # console.log "foo", foo
     it "should contain the newly created keys", (done) ->
       expect(foo).to.include.keys('body_summary')
       done()
@@ -101,7 +101,7 @@ describe 'Unit Testing Tumblr Helper', () ->
   describe "A Photo Tumblr Post", () ->
     language = 'es'
     foo = TumblrHelper.prettyPrintPost(post_with_photos,language)
-    console.log "foo", foo
+    # console.log "foo", foo
       
     it "should have halt if there's no post", (done) ->
       
