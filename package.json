@@ -4,8 +4,8 @@
   "description": "new babelpde website",
   "main": "index.js",
   "engines": {
-    "npm": "2.11.x",
-    "node": "0.12.2"
+    "npm": "5.0.x",
+    "node": "8.0.0"
   },
   "scripts": {
     "test": " mocha --compilers coffee:coffee-script/register -u bdd -R spec -t 5000 --recursive"
@@ -13,14 +13,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "coffee-script": "1.7.x",
+    "coffee-script": "^1.12.6",
     "compression": "^1.4.4",
-    "config": "^1.0.0",
-    "express": "^4.11.1",
+    "config": "^1.26.1",
+    "express": "^4.15.3",
     "express-device": "^0.3.0",
     "express-handlebars": "^1.1.0",
     "hbs": "~2.7.0",
-    "lodash": "^2.4.1",
+    "lodash": "^2.4.2",
     "moment-timezone": "^0.3.1",
     "serve-favicon": "2.3.0",
     "tumblr": "^0.4.1",
@@ -38,7 +38,7 @@
     "sandboxed-module": "^2.0.2",
     "should": "^6.0.3",
     "sinon": "^1.14.1",
-    "sinon-chai": "^2.7.0",
+    "sinon-chai": "^2.10.0",
     "supertest": "^1.0.1"
   }
 }
