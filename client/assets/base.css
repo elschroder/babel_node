@@ -5,16 +5,16 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0px 0px 0px 0px;
-  
+
 }
 
 @media screen and (min-width: 800px) {
-/*    // this css will only be used when the screen size is min 800px*/    
+/*    // this css will only be used when the screen size is min 800px*/
   .lateral-padding {
       margin: auto;
       padding: 0px 100px 0px 100px;
       max-width: 1261px;
-  
+
     }
 }
 
@@ -40,7 +40,7 @@ h4 {
 h5 {
   font-weight: bold;
   font-size: 16px;
-  color: #4C4C4C;  
+  color: #4C4C4C;
 }
 
 .more-content a {
@@ -75,7 +75,7 @@ h5 {
 }
 
 .splash-zone {
-  padding: 0 0 60px 0;  
+  padding: 0 0 60px 0;
 }
 
 .splash-full-image {
@@ -84,7 +84,7 @@ h5 {
 /*  min-height: 10%;*/
   max-width: 100%;
   overflow: hidden;
-  
+
 }
 
 #splash-estrutura {
@@ -98,7 +98,7 @@ h5 {
 .menu-bar {
   padding: 0 0 0px 0;
   margin: 0px 0px -20px 0px;
-  
+
 }
 
 .language-bar {
@@ -113,7 +113,7 @@ h5 {
 }
 
 .language-bar a{
-  color: #808080;  
+  color: #808080;
 }
 
 .proyectos-title {
@@ -160,7 +160,7 @@ h5 {
 {
     padding: 10em;
     padding-top:0px;
-  
+
     margin: -1px;
     content: "";
     display: inline-block;
@@ -176,7 +176,7 @@ h5 {
 }
 .sponsor-tab-footer .vertical-splitter {
   border-left: thick solid #ff0000;
-  
+
 }
 
 .copyright {
@@ -187,7 +187,7 @@ h5 {
 /*  color: #808080;*/
   color: #E05113;
   background-color: #E0E0E0;
-  
+
 }
 
 .copyright a {
@@ -200,7 +200,7 @@ h5 {
 
 .article-top-image {
   background-color: #000000;
-  
+
   width: 1280px;
   height:400px;
 }
@@ -208,27 +208,27 @@ h5 {
 .main-sponsors {
   font-size: 18px;
   color: #E05113;
-  
+
   margin: 20px 0px 0px 0px;
-  
+
 }
 .main-sponsors h3{
   font-weight: bold;
   font-size: 28px;
   margin: 0px 0px 20px 0px;
-  
+
 }
 .main-sponsors img {
   height: 55px;
   opacity: 0.4;
-   
+
 }
 
 .secondary-sponsors {
   margin: 0px 0px 0px 0px;
   height: 55px;
   opacity: 0.4;
-  
+
 }
 
 .secondary-sponsors-line {
@@ -237,9 +237,13 @@ h5 {
 
 .secondary-sponsors-line img {
   margin: 0px 20px 0px 0px;
-  
+
   height: 30px;
   filter: grayscale(100%);
+}
+
+#anti-rumors {
+  height: 50px;
 }
 
 .sponsor {
