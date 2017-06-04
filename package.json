@@ -20,7 +20,7 @@
     "express-device": "^0.3.0",
     "express-handlebars": "^1.1.0",
     "hbs": "~2.7.0",
-    "lodash": "^2.4.2",
+    "lodash": "2.4.2",
     "moment-timezone": "^0.3.1",
     "serve-favicon": "2.3.0",
     "tumblr": "^0.4.1",
