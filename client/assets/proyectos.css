@@ -1,9 +1,9 @@
 .project-menu-donation {
   font-weight: bold;
   font-size: 18px;
-  
+
   padding: 0px 0px 0px 0px;
-  
+
 }
 .project-menu-donation .button {
 /*  float: right;*/
@@ -60,6 +60,17 @@
 /*  float: bottom;*/
 }
 
+#splash-casa-acogida {
+  transform:translateY(-15.5%);
+}
+
+#splash-artifex {
+  transform:translateY(-20.5%);
+}
+#splash-puentes {
+  transform:translateY(-20.5%);
+}
+
 
 #coaching-social-empty-space  {
   margin-top: 71px;
@@ -107,7 +118,7 @@
 
 
 .project-item .project-item-buttons {
-  
+
 /*  position: relative;*/
   width:100%;
 /*  margin-bottom: -100px;*/
@@ -117,7 +128,7 @@
 
 .project-item .project-item-buttons .button {
 /*  padding: 1em;
-*/  
+*/
 /*  float: right;*/
   float: center;
   font-weight: bold;
@@ -171,5 +182,5 @@
 .project-list .location {
   font-size: 13px;
   color: #E05113;
-  
+
 }
