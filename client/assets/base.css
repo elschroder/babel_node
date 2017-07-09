@@ -143,16 +143,6 @@ h5 {
 }
 
 
-.secondary-sponsors-item  {
-
-  margin: 2px 2px 2px 2px;
-}
-
-.secondary-sponsors-item img {
-  max-height: 30px;
-
-  /*height: 100px;*/
-}
 
 
 
@@ -273,22 +263,47 @@ h5 {
 
 }
 .main-sponsors img {
-  /*height: 35px;*/
-  opacity: 0.4;
+  max-height: 50px;
+  margin: 10px 10px 10px 10px;
 
+  opacity: 0.4;
+}
+
+.main-sponsors-item {
+/*max-height: 10px;*/
+}
+#logo-la-caixa{
+  /*margin: 10px 10px 20px 10px;*/
+  /*padding: 0 0 10px 0;*/
+  transform:translate(0%, -12.5%);
+  /*transform:translateX(35.5%);*/
 }
 
 .secondary-sponsors {
   /*margin: 0px 0px 0px 0px;*/
-  /*height: 55px;*/
   opacity: 0.4;
 
 }
 
-.secondary-sponsors-line {
+.secondary-sponsors-item img {
   /*display: block;*/
+  margin: 5px 5px 5px 5px;
+  /*height: 155px;*/
+  max-height: 40px;
+
   /*margin: 30px 0px 0px 0px;*/
 }
+
+.secondary-sponsors-item  {
+
+  margin: 2px 2px 2px 2px;
+}
+
+.secondary-sponsors-item img {
+
+  /*height: 100px;*/
+}
+
 
 .secondary-sponsors-line img {
   /*margin: 0px 15px 0px 0px;*/
