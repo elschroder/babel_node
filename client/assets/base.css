@@ -15,7 +15,7 @@ all-content {
 
 footer {
   /*height: 300px;*/
-  background-color: #FFE0E0;
+  background-color: #E0E0E0;
 }
 footer a {
   /*display: run-in;*/
@@ -100,7 +100,7 @@ h5 {
 
 .splash-full-image {
   max-height: 400px;
-  min-height: 400px;
+  /*min-height: 400px;*/
 /*  min-height: 10%;*/
   max-width: 100%;
   overflow: hidden;
@@ -141,6 +141,22 @@ h5 {
   height: auto;
   opacity: 0.4;
 }
+
+
+.secondary-sponsors-item  {
+
+  margin: 2px 2px 2px 2px;
+}
+
+.secondary-sponsors-item img {
+  max-height: 30px;
+
+  /*height: 100px;*/
+}
+
+
+
+
 
 .proyectos-title {
   color:#E05113;
@@ -218,7 +234,7 @@ h5 {
 /*  color: #808080;*/
   color: #E05113;
   /*background-color: #E0E0E0;*/
-
+  padding: 2em 0px 2em 0px;
 }
 
 .copyright a {
@@ -228,6 +244,12 @@ h5 {
 .copyright ul {
   list-style-type: none;
 }
+
+.opening-hours {
+  color: #808080;
+}
+
+
 
 .article-top-image {
   background-color: #000000;
@@ -241,7 +263,7 @@ h5 {
   color: #E05113;
   /*height:px;*/
 
-  margin: 20px 0px 0px 0px;
+  /*margin: 20px 0px 0px 0px;*/
 
 }
 .main-sponsors h3{
@@ -251,32 +273,32 @@ h5 {
 
 }
 .main-sponsors img {
-  height: 35px;
+  /*height: 35px;*/
   opacity: 0.4;
 
 }
 
 .secondary-sponsors {
-  margin: 0px 0px 0px 0px;
-  height: 55px;
+  /*margin: 0px 0px 0px 0px;*/
+  /*height: 55px;*/
   opacity: 0.4;
 
 }
 
 .secondary-sponsors-line {
-  display: block;
-  margin: 30px 0px 0px 0px;
+  /*display: block;*/
+  /*margin: 30px 0px 0px 0px;*/
 }
 
 .secondary-sponsors-line img {
-  margin: 0px 15px 0px 0px;
+  /*margin: 0px 15px 0px 0px;*/
 
-  height: 25px;
+  /*height: 25px;*/
   filter: grayscale(100%);
 }
 
 #anti-rumors {
-  height: 35px;
+  /*height: 35px;*/
 }
 
 .sponsor {

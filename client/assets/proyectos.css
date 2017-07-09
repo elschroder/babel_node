@@ -154,10 +154,11 @@
 }
 
 #splash-artifex {
-  transform:translateY(-1.5%);
+  transform:translateY(-20.5%);
 }
 #splash-puentes {
-  transform:translateY(-20.5%);
+  transform:translateY(-35.5%);
+  /*transform: scale(0.9);*/
 }
 
 
