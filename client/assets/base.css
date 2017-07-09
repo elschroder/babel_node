@@ -1,25 +1,46 @@
 html {
   margin: 0px 0px 0px 0px;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0px 0px 0px 0px;
-
 }
+
+all-content {
+}
+
+
+footer {
+  /*height: 300px;*/
+  background-color: #FFE0E0;
+}
+footer a {
+  /*display: run-in;*/
+}
+
 
 @media screen and (min-width: 800px) {
 /*    // this css will only be used when the screen size is min 800px*/
-  .lateral-padding {
+  .lateral-padding-100 {
       margin: auto;
       padding: 0px 100px 0px 100px;
       max-width: 1261px;
 
     }
+  .lateral-padding {
+        margin: auto;
+        padding: 0px 0px 0px 100px;
+        max-width: 1261px;
+
+  }
 }
 
 header {
-  padding: 0 0 4em;
+  padding: 0 0 2em;
+  /*margin-bottom: 4em;*/
 }
 
 .main-logo {
@@ -43,14 +64,17 @@ h5 {
   color: #4C4C4C;
 }
 
-.more-content a {
-  font-weight: bold;
-  color: #E05113;
-  font-size: 13px;
-  float:right;
+
+
+.all-content {
+  padding-bottom: 4em;
 }
-
-
+.page-copywrite {
+  padding-bottom: 4em;
+}
+.page-content {
+  padding-bottom: 4em;
+}
 .underline-title {
   font-weight: bold;
   color: #4C4C4C;
@@ -68,10 +92,6 @@ h5 {
 .underline-title:after {
 /*    left: 1em;*/
     margin-right: 0%;
-}
-
-.interactive-area {
-/*  padding: 0 60px 0 60px;*/
 }
 
 .splash-zone {
@@ -96,8 +116,8 @@ h5 {
 }
 
 .menu-bar {
-  padding: 0 0 0px 0;
-  margin: 0px 0px -20px 0px;
+  padding: 0 0 2em 0;
+  /*margin: 0px 0px -20px 0px;*/
 
 }
 
@@ -116,6 +136,12 @@ h5 {
   color: #808080;
 }
 
+.language-bar img {
+  width: 24px;
+  height: auto;
+  opacity: 0.4;
+}
+
 .proyectos-title {
   color:#E05113;
 }
@@ -124,17 +150,13 @@ h5 {
   color:#E05113;
 }
 
-.language-bar img {
-  width: 24px;
-  height: auto;
-  opacity: 0.4;
-}
+
 
 .sponsor-tab-footer {
   margin-top: 80px;
 /*  margin-bottom: 40px;*/
-  padding: 40px 0 40px 0;
-  position: relative;
+  padding: 0px 0 0px 0;
+  /*position: relative;*/
   color: #808080;
   background-color: #E0E0E0;
 /*  max-height: 300px;
@@ -145,6 +167,15 @@ h5 {
 /*  border-style: solid;*/
 /*  border-right: 1px;*/
   margin-bottom:6em;
+}
+
+.inner-sponsor-tab-footer .address1 address {
+  font-size: 14px;
+
+}
+.inner-sponsor-tab-footer address {
+  font-size: 14px;
+
 }
 
 
@@ -172,7 +203,7 @@ h5 {
 
 .sponsors {
   padding-top:0px;
-  padding-left:30px;
+  padding-left:0px;
 }
 .sponsor-tab-footer .vertical-splitter {
   border-left: thick solid #ff0000;
@@ -181,12 +212,12 @@ h5 {
 
 .copyright {
 /*  position: relative;*/
-  padding-top:-1em;
+  /*padding-top:-1em;*/
   font-size: 14px;
-  padding: 0 0 0 80px;
+  /*padding: 0 0 0 80px;*/
 /*  color: #808080;*/
   color: #E05113;
-  background-color: #E0E0E0;
+  /*background-color: #E0E0E0;*/
 
 }
 
@@ -208,6 +239,7 @@ h5 {
 .main-sponsors {
   font-size: 18px;
   color: #E05113;
+  /*height:px;*/
 
   margin: 20px 0px 0px 0px;
 
@@ -219,7 +251,7 @@ h5 {
 
 }
 .main-sponsors img {
-  height: 55px;
+  height: 35px;
   opacity: 0.4;
 
 }
@@ -232,18 +264,19 @@ h5 {
 }
 
 .secondary-sponsors-line {
+  display: block;
   margin: 30px 0px 0px 0px;
 }
 
 .secondary-sponsors-line img {
-  margin: 0px 20px 0px 0px;
+  margin: 0px 15px 0px 0px;
 
-  height: 30px;
+  height: 25px;
   filter: grayscale(100%);
 }
 
 #anti-rumors {
-  height: 50px;
+  height: 35px;
 }
 
 .sponsor {

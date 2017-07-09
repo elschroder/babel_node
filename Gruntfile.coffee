@@ -9,10 +9,10 @@ module.exports = (grunt) ->
         force: true
       precompile:
         ['client/build']
-    bower_concat: 
-      all:
-        dest: 'client/build/_bower.js'
-        cssDest: 'client/build/bower.css'
+    # bower_concat:
+#       all:
+#         dest: 'client/build/_bower.js'
+#         cssDest: 'client/build/bower.css'
             
         #callback: (mainFiles, component) ->
         #  _.map(mainFiles, (filepath) ->
@@ -21,21 +21,21 @@ module.exports = (grunt) ->
         #      console.log "min", min
         #      grunt.file.exists(min) ? min : filepath
         #      )
-    uglify:
-      bower:
-        options:
-          mangle: true
-          compress: true
-        files:
-          'client/dist/bower.min.js': 'client/build/_bower.js'
-          #'client/dist/bower.min.css': 'client/dist/_bower.css'
+    # uglify:
+#       bower:
+#         options:
+#           mangle: true
+#           compress: true
+#         files:
+#           'client/dist/bower.min.js': 'client/build/_bower.js'
+#           #'client/dist/bower.min.css': 'client/dist/_bower.css'
     cssmin:
       target:
         files: [
             expand: true
-            cwd: 'client/build/'
+            cwd: 'client/assets/'
             src: ['*.css', '!*.min.css']
-            dest: 'client/dist'
+            dest: 'client/dist_new'
             ext: '.min.css'
           
         ]
@@ -46,11 +46,12 @@ module.exports = (grunt) ->
         src: 'server/views/layouts/babel.hbs'
         dest: 'server/views/layouts/dist/babel.hbs'
   )
-  grunt.loadNpmTasks('grunt-bower-concat')
+  # grunt.loadNpmTasks('grunt-bower-concat')
   grunt.loadNpmTasks('grunt-contrib-clean')
   
-  grunt.loadNpmTasks('grunt-contrib-uglify')
+  # grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
   grunt.loadNpmTasks('grunt-inline')
   grunt.loadTasks('tasks')  
-  grunt.registerTask('default', ['bower:install', 'bower_concat',  'uglify', 'cssmin', 'inline', 'clean'])
+  # grunt.registerTask('default', ['bower:install', 'bower_concat',  'uglify', 'cssmin', 'inline', 'clean'])
+  grunt.registerTask('default', [ 'cssmin', 'inline', 'clean'])
