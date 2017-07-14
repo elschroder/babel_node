@@ -1,13 +1,19 @@
 .side-menu-donation {
   font-weight: bold;
   font-size: 18px;
-  
   padding: 0px 0px 0px 0px;
-  
+
 }
+.side-menu-donation .column {
+  padding: 0px;
+  /*display: inline-block;*/
+}
+
 .side-menu-donation .button {
+  margin: 1px;
+
   float: right;
-  max-width: 300px;
+  /*max-width: 300px;*/
   width: 100%;
   background-color:#E05113;
 /*  padding: 15px 0px 15px 0px;*/
@@ -16,7 +22,9 @@
 
 .side-menu-donation .button-inverse {
 /*  float: right;*/
-  max-width: 300px;
+margin: 1px;
+
+  /*max-width: 300px;*/
   width: 100%;
   color:#E05113;
   background-color: white;

@@ -1,33 +1,34 @@
 <title>{{#if isEs}}Noticias{{/if}}{{#if isCat}}Noticies{{/if}}{{#if isEn}}News{{/if}} • {{post_item.title}}</title>
+<div class="large-12 row">
+  <div class="large-12 row page-content">
+    <div class="large-3 columns news-title"> <h4 class="underline-title">{{#if isEn}}News{{/if}}{{#if isEs}}<a href="/es/noticias">Noticias</a>{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
+    </div>
 
-<div class="large-3 columns news-title"> <h4 class="underline-title">{{#if isEn}}News{{/if}}{{#if isEs}}<a href="/es/noticias">Noticias</a>{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
+    <div class="large-6 columns news-item">
+      <!-- <hr> -->
+      <h5>{{post_item.title}}</h5>
+      <h6><em>{{post_item.date}}</em> | Fundación Babel Punto de Encuentro</h6>
+      <div>{{{post_item.caption}}}</div>
+      {{#each post_item.photos}}
+        <a href="{{original_size.url}}" target='_blank'><img class='img-responsive' src={{picked_size.url}}></a>
+      {{/each}}
+      {{#if post_item.isPhoto}}
+        <!-- <h1>photo </h1> -->
+        <!-- <div></div> -->
+      {{/if}}
+      {{#if post_item.isText}}
+        <!-- <h1>text </h1> -->
+      <div>{{{post_item.body}}}</div>
+      {{/if}}
+      <h5 class="more-content">
+        <a href={{#if isEs}}"/es/noticias/"{{/if}}{{#if isCat}}"/cat/noticies/"{{/if}}{{#if isEn}}"/en/news/"{{/if}}>
+      {{#if isEs}}Volver a noticias{{/if}}{{#if isCat}}Tornar a les notícies{{/if}}{{#if isEn}}Back to news{{/if}}</em>
+        </a>
+      </h5>
+    </div>
+    {{> common/side-menu-donation}}
+  </div>
 </div>
-<div class="large-6 columns news-item">
-  <!-- <hr> -->
-  <h5>{{post_item.title}}</h5>
-  <h6><em>{{post_item.date}}</em> | Fundación Babel Punto de Encuentro</h6>
-  <div>{{{post_item.caption}}}</div>
-  {{#each post_item.photos}}
-    <a href="{{original_size.url}}" target='_blank'><img class='img-responsive' src={{picked_size.url}}></a>
-  {{/each}}
-  {{#if post_item.isPhoto}}
-    <!-- <h1>photo </h1> -->
-    <!-- <div></div> -->
-  {{/if}}
-  {{#if post_item.isText}}
-    <!-- <h1>text </h1> -->
-  <div>{{{post_item.body}}}</div>
-  {{/if}}
-  <h5 class="more-content">
-    <a href={{#if isEs}}"/es/noticias/"{{/if}}{{#if isCat}}"/cat/noticies/"{{/if}}{{#if isEn}}"/en/news/"{{/if}}>
-  {{#if isEs}}Volver a noticias{{/if}}{{#if isCat}}Tornar a les notícies{{/if}}{{#if isEn}}Back to news{{/if}}</em>
-    </a>
-  </h5>
+<div class="large-12 row">
+  {{> es/common/otros_proyectos}}
 </div>
-{{> common/side-menu-donation}}
-
-
-
-    
-
-  

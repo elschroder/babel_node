@@ -1,42 +1,50 @@
 <title>Fundación Babel Punto de Encuentro</title>
 
-<div class="large-12 columns splash-zone">
-  <h3>A través de nuestros proyectos creamos herramientas para que las personas tomen las riendas de sus destinos y puedan alcanzar una vida digna.</h3>
-  {{> common/project-menu-donation}}
-  <!-- <div class="project-menu-donation">
-    <a class="button " href="#">DONA </a>
-    <a class="button " href="#">HAZTE SOCIO</a>
-    <a class="button button-inverse " href="#">OTRAS FORMAS DE ACTUAR</a>
-  </div> -->
-  <!-- <div>
-    <button type="button" class="">DONA</button>
-    <button type="button" class="">HAZTE SOCIO</button>
-    <button type="button" class="">OTRAS FORMAS DE ACTUAR</button>
-  </div>   -->
-</div>
-{{#if is_desktop}}
-<h4 class="underline-title">PROYECTOS ACTIVOS</h4>
-
-<div class="large-12 columns project-list">
-  <!-- {{> es/proyectos_description/becas_escolarizacion}} -->
-  {{> es/proyectos_description/becas_escolarizacion}}
-  {{> es/proyectos_description/colonias_verano}}
-  {{> es/proyectos_description/centro_femenino}}
-  {{> es/proyectos_description/micro_proyectos}}
-  {{> es/proyectos_description/casa_acogida}}
-  {{> es/proyectos_description/coaching_social}}
-  {{> es/proyectos_description/integracion}}
-  <div class="">
+<div class="large-12 row">
+  <div class="medium-12 large-12 row splash-zone">
+    <h3>A través de nuestros proyectos creamos herramientas para que las personas tomen las riendas de sus destinos y puedan alcanzar una vida digna.</h3>
+    {{> common/project-menu-donation}}
   </div>
-</div>
-<div class="large-12 columns more-content"><a href="/es/proyectos">Ver más proyectos>></a></div>
-{{/if}}
-
-<div class="large-9 columns project-list  noticias">
-  <h4 class="underline-title ">{{#if isEn}}News{{/if}}{{#if isEs}}Noticias{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
-  {{> common/tumblr/list}}
-  <div class="more-content"><a href="/es/noticias">Ver más noticias>></a></div>
-</div>
-<div class="large-3 columns project-list">
-  
+  <div class="large-12 row page-content">
+    <div class="large-12 row">
+      <div class="large-12 column medium-12 small-12">
+        <h4 class="   underline-title">PROYECTOS ACTIVOS</h4>
+      </div>
+      <div class="row large-12 column project-list">
+        <div class="small-12 medium-6 large-3 column">
+          {{> es/proyectos_description/coaching_social}}
+        </div>
+        <div class="small-12 medium-6 large-3 column">
+          {{> es/proyectos_description/colonias_verano}}
+        </div>
+        <div class="small-12 medium-6 large-3 column">
+          {{> es/proyectos_description/casa_acogida}}
+        </div>
+        <div class="small-12 medium-6 large-3 column">
+          {{> es/proyectos_description/centro_femenino}}
+        </div>
+        <div class="small-12 medium-6 large-3 column">
+          {{> es/proyectos_description/micro_proyectos}}
+        </div>
+        <div class="small-12 medium-6 large-3 column">
+          {{> es/proyectos_description/integracion}}
+        </div>
+        <div class="small-12 medium-6 large-3 column">
+          {{> es/proyectos_description/becas_escolarizacion}}
+        </div>
+        <div class="small-12 medium-6 large-3 column">
+        </div>
+      </div>
+    </div>
+    <div class="large-12 row">
+      <div class="large-12 column more-content"><a href="/es/proyectos">Ver más proyectos>></a></div>
+    </div>
+    <div class="large-12 row">
+      <div class="large-9 columns project-list  noticias">
+        <h4 class="underline-title ">{{#if isEn}}News{{/if}}{{#if isEs}}Noticias{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
+        {{> common/tumblr/list}}
+        <div class="large-12 column more-content"><a href="/es/noticias">Ver más noticias>></a></div>
+      </div>
+    </div>
+  </div>
 </div>

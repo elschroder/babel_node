@@ -1,9 +1,13 @@
 <title>Noticias</title>
-
-<div class="large-3 columns news-title"> <h4 class="underline-title">{{#if isEn}}News{{/if}}{{#if isEs}}<a href="/es/noticias">Noticias</a>{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
- </div>
-<div class="large-6 columns news-images">
-  {{> common/tumblr/list}}
+<div class="large-12 row">
+  
+  <div class="large-12 row page-content">
+    <div class="large-3 column news-title">
+      <h4 class="underline-title">{{#if isEn}}News{{/if}}{{#if isEs}}<a href="/es/noticias">Noticias</a>{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
+    </div>
+    <div class="small-12 medium-6 large-6 column page-copywrite">
+      {{> common/tumblr/list}}
+    </div>
+    {{> common/side-menu-donation}}
+  </div>
 </div>
-<!-- <div class="large-3 columns "> </div> -->
-{{> common/side-menu-donation}}
