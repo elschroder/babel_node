@@ -68,6 +68,8 @@ h5 {
 
 .all-content {
   padding-bottom: 4em;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 .page-copywrite {
   padding-bottom: 4em;
@@ -168,11 +170,19 @@ h5 {
 /*  max-height: 300px;
 */}
 
+
+.base-footer {
+  padding-top: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 1em;
+}
 .inner-sponsor-tab-footer{
   padding-top:1em;
+  /*margin-left: 3em;*/
 /*  border-style: solid;*/
 /*  border-right: 1px;*/
-  margin-bottom:6em;
+  /*margin-bottom:6em;*/
 }
 
 .inner-sponsor-tab-footer .address1 address {
@@ -249,6 +259,7 @@ h5 {
 }
 
 .main-sponsors {
+  padding-top: 1em;
   font-size: 18px;
   color: #E05113;
   /*height:px;*/
