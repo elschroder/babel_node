@@ -26,12 +26,13 @@ setScaledImages = (post) ->  #picks a smaller image and all tumblr links are red
       else
         image.picked_size = image.original_size
     )
-        
+
 setSummary = (post, language) ->
   # console.log "post=\n", post, "\n==\n"
-  post.caption_summary = _s.prune(post.caption, 640) if post.caption
+  post.caption_summary = _s.prune(post.caption, 1000) if post.caption
   post.caption_summary = post.caption_summary.replace(/\.\.\.$/, " <a href='/#{language}/n/#{post.id}'>[+]</a></b></i></p>") if post.caption_summary #extra </b></i></p> are result of a work-around to circunvent the missing closing tags when the text is truncated. scripts to find them where quite heavy.
-  post.body_summary =  _s.prune(post.body, 640) if post.body
+  # post.body_summary =  _s.prune(post.body, 1000) if post.body
+  post.body_summary =  _s.prune(post.body, 1000) if post.body
   post.body_summary = post.body_summary.replace(/\.\.\.$/, " <a href='/#{language}/n/#{post.id}'>[+]</a></b></i></p>") if post.body_summary #extra </b></i></p> are result of a work-around to circunvent the missing closing tags when the text is truncated. scripts to find them where quite heavy.
   _.extend(post, LanguageId(language))
 
@@ -48,7 +49,7 @@ setType = (post) ->
 setLanguage = (post, language) ->
   post.language = language
   post
-  
+
 module.exports.prettyPrintPost = prettyPrintPost = (post, language) ->
   setLanguage(post, language)
   setType(post)
@@ -57,6 +58,5 @@ module.exports.prettyPrintPost = prettyPrintPost = (post, language) ->
   setSummary(post, language)
   setDate(post, language)
   # console.log "post=\n", post, "\n==\n"
-  
+
   post
-  

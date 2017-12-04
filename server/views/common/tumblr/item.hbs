@@ -3,7 +3,7 @@
   <div class="noticias">
     <div class="element news-images">
       <div class='img-div'>
-        {{#each photos}}          
+        {{#each photos}}
         <div>
           <a href="{{original_size.url}}"target='_blank'>
             <img class='img-responsive' src={{picked_size.url}}>
@@ -18,10 +18,9 @@
         <div>{{{caption_summary}}}</div>
       </div>
     </div>
-    <!-- <h4 class="underline-grey"> </h4> -->
     <hr>
   </div>
-  {{/if}}    
+  {{/if}}
   {{#if isText}}
     <div class="noticias">
       <div class="element-text">
@@ -36,6 +35,3 @@
     </div>
   {{/if}}
 </div>
-    
-
-  
