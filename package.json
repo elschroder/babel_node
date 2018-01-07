@@ -13,16 +13,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "coffee-script": "^1.12.6",
-    "compression": "^1.6.2",
-    "config": "^1.26.1",
-    "express": "^4.15.3",
-    "express-device": "^0.3.13",
-    "express-handlebars": "^1.2.2",
-    "hbs": "^2.7.0",
-    "lodash": "^2.4.2",
-    "moment-timezone": "^0.3.1",
-    "serve-favicon": "^2.3.0",
+    "coffee-script": "^1.12.7",
+    "compression": "^1.7.1",
+    "config": "^1.29.1",
+    "express": "^4.16.2",
+    "express-device": "^0.4.2",
+    "express-handlebars": "^3.0.0",
+    "hbs": "^4.0.0",
+    "lodash": "^4.17.0",
+    "moment-timezone": "^0.5.14",
+    "serve-favicon": "^2.4.5",
     "tumblr": "^0.4.1",
     "underscore.string": "^3.3.4"
   },
@@ -38,7 +38,7 @@
     "sandboxed-module": "^2.0.2",
     "should": "^6.0.3",
     "sinon": "^1.14.1",
-    "sinon-chai": "^2.10.0",
+    "sinon-chai": "^2.14.0",
     "supertest": "^1.0.1"
   }
 }
