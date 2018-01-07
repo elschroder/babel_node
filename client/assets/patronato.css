@@ -83,13 +83,6 @@ float: left;
   max-width: 200px;
   transform:translate(-12%);
 }
-#felix-castillo {
-  height: auto;
-  width: auto;
-  max-width: 150px;
-  transform:translate(0%);
-  margin-top:-10px;
-}
 
 #mireia {
   height: auto;
@@ -108,13 +101,6 @@ float: left;
 /* margin-top:-0px;*/
 }
 
-#josep {
-  height: auto;
-  width: auto;
-  min-width: 150px;
-/*  transform:translate(-60%);*/
-  margin-top:0;
-}
 #borja-sans {
   height: auto;
   width: auto;
