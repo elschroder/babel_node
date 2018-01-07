@@ -44,6 +44,7 @@ setType = (post) ->
   post.isText = true if post.type == 'text'
   post.isPhoto = true if post.type == 'photo'
   post.isVideo = true if post.type == 'video'
+  post.isLink = true if post.type == 'link'
   post
 
 setLanguage = (post, language) ->

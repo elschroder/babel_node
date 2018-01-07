@@ -58,4 +58,26 @@
       <hr>
     </div>
   {{/if}}
+  {{#if isLink}}
+    <div class="noticias">
+      <div class="element news-images">
+        <div class='img-div'>
+          {{#each photos}}
+          <div>
+            <a href="{{original_size.url}}"target='_blank'>
+              <img class='img-responsive' src={{picked_size.url}}>
+            </a>
+          </div>
+          {{/each}}
+        </div>
+        <div></div>
+        <div class="description-photos">
+          <h5><a href={{url}} target='_blank'>{{title}}</a></h5>
+          <div><em>{{date}}</em></div>
+          <div>{{excerpt}}</div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  {{/if}}
 </div>
