@@ -34,4 +34,28 @@
       <hr>
     </div>
   {{/if}}
+  {{#if isVideo}}
+    <div class="noticias">
+      <div class="element-text">
+        <div class="description-text">
+          <h5><a href='/{{language}}/n/{{id}}'>{{title}}</a></h5>
+          <div><em>{{date}}</em></div>
+          <div>
+            <br>
+            <div>
+              <video width="400"  controls>
+                <source src="{{video_url}}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+            <br>
+            <div class="project-list-text">
+              {{{caption}}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  {{/if}}
 </div>

@@ -4,7 +4,7 @@ Moment = require 'moment-timezone'
 LanguageId = require '../helpers/language'
 
 setTitle = (post) ->
-  if post.type == 'photo' #if a post is of the type photo we need to create a title.
+  if (post.type == 'photo' || post.type == 'video') #if a post is of the type photo we need to create a title.
     caption = post.caption
     # console.log "===== setTitle ", post.caption
     caption = caption.replace(/\n/g, ' ')
