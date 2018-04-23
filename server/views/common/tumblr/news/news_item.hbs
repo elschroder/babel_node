@@ -1,7 +1,7 @@
-<title>{{#if isEs}}Noticias{{/if}}{{#if isCat}}Noticies{{/if}}{{#if isEn}}News{{/if}} • {{post_item.title}}</title>
+<title>Noticias • {{post_item.title}}</title>
 <div class="large-12 row">
   <div class="large-12 row page-content">
-    <div class="large-3 columns news-title"> <h4 class="underline-title">{{#if isEn}}News{{/if}}{{#if isEs}}<a href="/es/noticias">Noticias</a>{{/if}}{{#if isCat}}Noticies{{/if}}</h4>
+    <div class="large-3 columns news-title"> <h4 class="underline-title"><a href="/es/noticias">Noticias</a></h4>
     </div>
 
     <div class="large-6 columns news-item">
@@ -33,9 +33,7 @@
       {{/if}}
       <br>
       <h5 class="more-content">
-        <a href={{#if isEs}}"/es/noticias/"{{/if}}{{#if isCat}}"/cat/noticies/"{{/if}}{{#if isEn}}"/en/news/"{{/if}}>
-      {{#if isEs}}Volver a noticias{{/if}}{{#if isCat}}Tornar a les notícies{{/if}}{{#if isEn}}Back to news{{/if}}</em>
-        </a>
+        <a href="/es/noticias/">Volver a noticias</a>
       </h5>
     </div>
     {{> common/side-menu-donation}}
