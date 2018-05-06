@@ -29,12 +29,13 @@ deviceHelpers(app);
 
 app.use('/assets', express.static('client/assets', { maxAge: 31536000 * 1000 })); // #cache for 1 year
 app.use('/assets', express.static('client/dist', { maxAge: 31536000 * 1000 })); // #cache for 1 year
-app.use('/assets', express.static('bower_components', { maxAge: 31536000 * 1000 })); // #cache for 1 year
+// app.use('/assets', express.static('bower_components', { maxAge: 31536000 * 1000 })); // #cache for 1 year
 app.use(favicon(`${process.cwd()}/client/assets/favicon.ico`));
 app.use(compression());
 
 app.use('/:language/', (req, res, next) => {
   console.log(`allowed langs ${config.allowed_languages}`);
+  console.log('TODO');
   if (config.allowed_languages.includes(req.params.language) || req.params.language == 'robots.txt') { next(); } else { res.send(404); }
 });
 
