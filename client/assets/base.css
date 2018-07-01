@@ -330,3 +330,27 @@ h5 {
 .sponsor {
   margin: 0px -20px 0px 0px;
 }
+
+
+
+.CookieAlert {
+
+  background-color: #E0E0E0;
+  border-top: 0.1px solid grey;
+  bottom: 0;
+  padding: 1.5rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.CookieAlert a {
+  color: #E05113;
+
+}
+
+.CookieAlert-content {
+  /* display: flex; */
+  /* flex-wrap: nowrap; */
+  /* flex-direction: row; */
+}

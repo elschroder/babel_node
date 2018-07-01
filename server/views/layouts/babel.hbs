@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="/assets/contact.css">
     <link rel="stylesheet" type="text/css" href="/assets/proyectos.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>  </head>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+
+
   <header>
     <div class="row expanded">
       <div class="large-12 column language-bar">
@@ -144,7 +147,73 @@
       <a href="/">Copyright © 2012-2017, BPDE - Fundación Babel Punto de Encuentro</a>
     </div>
   </footer>
+  <div id="CookieAlert" class="CookieAlert column large-12" style="visibility:hidden">
+    <div class="Container column large-12">
+      <div class="column large-12">
+        <p class="CookieAlert-content" >
+          <span>Utilizamos cookies para poder darte un mejor servicio. Continua usando nuestro website si estas de acuerdo con ello, o sabe mas sobre como <a class="" href="/es/cookies">usamos cookies</a>.</span>
+          <span onclick="acceptCookies()" class="CookieAlert-cta u-ml15">
+            <i class="fi-x small"></i>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
 </html>
+<script type="text/javascript" >
+  function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i <ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+          }
+      }
+      return null;
+  }
+
+  function checkAcceptedCookies() {
+    console.log("checkAcceptedCookies");
+    console.log(getCookie('acceptedCookies'));
+    if (!getCookie('acceptedCookies'))
+    {
+      setVisibleCookieBanner();
+    }
+  }
+
+  function acceptCookies() {
+    setCookie("acceptedCookies", true, 365);
+    setHiddenCookieBanner();
+  }
+
+  function setVisibleCookieBanner() {
+    console.log("setVisibleCookieBanner");
+    var x = document.getElementById("CookieAlert");
+    x.style.visibility = "visible";
+  }
+
+  function setHiddenCookieBanner() {
+    console.log("setHiddenCookieBanner");
+
+    var x = document.getElementById("CookieAlert");
+    x.style.visibility = "hidden";
+  }
+
+  checkAcceptedCookies();
+</script>
+
 <script type="text/javascript" src="/assets/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/foundation.min.js"></script>
 <script>$(document).foundation();</script>
