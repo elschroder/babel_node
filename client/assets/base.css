@@ -349,6 +349,11 @@ h5 {
 
 }
 
+.CookieAlert .button {
+  background-color: #E05113;
+  font-weight: bold;
+}
+
 .CookieAlert-content {
   /* display: flex; */
   /* flex-wrap: nowrap; */
