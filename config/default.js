@@ -10,7 +10,9 @@ module.exports = {
     on: process.env.tumblr_on ? process.env.tumblr_on === "true" : true,
     oauth: {
       consumer_key :  process.env.tumblr_key,
-      consumer_secret :  process.env.tumblr_secret
+      consumer_secret :  process.env.tumblr_secret,
+      token: process.env.tumblr_token,
+      token_secret: process.env.tumblr_token_secret
     },
     blog: process.env.tumblr_blog || 'babelpde.tumblr.com'
   },
