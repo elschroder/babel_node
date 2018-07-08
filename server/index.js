@@ -34,12 +34,12 @@ app.use(favicon(`${process.cwd()}/client/assets/favicon.ico`));
 app.use(compression());
 
 app.use('/:language/', (req, res, next) => {
-  console.log(`allowed langs ${config.allowed_languages}`);
-  console.log('TODO');
+  // console.log(`allo/wed langs ${config.allowed_languages}`);
+  // console.log('TODO');
   if (config.allowed_languages.includes(req.params.language) || req.params.language == 'robots.txt') { next(); } else { res.send(404); }
 });
 
-const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+const server = app.listen(port, () => console.log(`App listening on port ${port}!`));
 
 server.addListener('connection', (stream) => {
   stream.setTimeout(4000); // timeout 4 s
