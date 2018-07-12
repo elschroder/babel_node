@@ -1,16 +1,25 @@
 <title>Fundación Babel Punto de Encuentro</title>
-
-<div class="large-12 row">
+<div class="large-12 column">
   <div class="medium-12 large-12 row splash-zone">
-    <h3>A través de nuestros proyectos creamos herramientas para que las personas tomen las riendas de sus destinos y puedan alcanzar una vida digna.</h3>
+    <div class="column">
+      <h3 class="row">A través de nuestros proyectos creamos herramientas para que las personas tomen las riendas de sus destinos y puedan alcanzar una vida digna.</h3>
+    </div>
+  </div>
+  <div class="row">
     {{> common/project-menu-donation}}
   </div>
   <div class="large-12 row page-content">
-    <div class="large-12 row">
-      <div class="large-12 column medium-12 small-12">
-        <h4 class="   underline-title">PROYECTOS ACTIVOS</h4>
+    <div class="large-12 column">
+      <div class="large-12 row medium-12 small-12">
+        <h4 class="underlinex-title">PROYECTOS ACTIVOS</h4>
       </div>
-      <div class="row large-12 column project-list">
+      <div class="column">
+        <div class="underline-title row"></div>
+
+      </div>
+      <br>
+
+      <div class="row large-12 row project-list">
         <div class="small-12 medium-6 large-3 column">
           {{> es/proyectos_description/coaching_social}}
         </div>
@@ -35,16 +44,19 @@
         <div class="small-12 medium-6 large-3 column">
         </div>
       </div>
+      <div class="large-12 row">
+        <div class="large-12 column more-content"><a href="/es/proyectos">Ver más proyectos>></a></div>
+      </div>
     </div>
-    <div class="large-12 row">
-      <div class="large-12 column more-content"><a href="/es/proyectos">Ver más proyectos>></a></div>
-    </div>
-    <div class="large-12 row">
-      <div class="large-9 columns project-list  noticias">
+  </div>
+  <div class="row">
+    <div class="large-12 column">
+      <div class="large-12 row project-list  noticias">
         <h4 class="underline-title">Noticias</h4>
         {{> common/tumblr/list}}
         <div class="large-12 column more-content"><a href="/es/noticias">Ver más noticias>></a></div>
       </div>
     </div>
+
   </div>
 </div>

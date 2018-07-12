@@ -9,9 +9,14 @@ body {
   margin: 0px 0px 0px 0px;
 }
 
-all-content {
+
+/* .column div {
+  border: 1px solid green;
 }
 
+.row div  {
+  border: 1px solid purple;
+} */
 
 footer {
   /*height: 300px;*/
@@ -25,14 +30,14 @@ footer a {
 @media screen and (min-width: 800px) {
 /*    // this css will only be used when the screen size is min 800px*/
   .lateral-padding-100 {
-      margin: auto;
-      padding: 0px 100px 0px 100px;
+      /* margin: auto; */
+      /* padding: 0px 100px 0px 100px; */
       max-width: 1261px;
 
     }
   .lateral-padding {
         margin: auto;
-        padding: 0px 0px 0px 100px;
+        /* padding: 0px 0px 0px 100px; */
         max-width: 1261px;
 
   }
@@ -66,16 +71,16 @@ h5 {
 
 
 
-.all-content {
+/* .all-content {
   padding-bottom: 4em;
   padding-left: 3em;
   padding-right: 3em;
-}
+} */
 .page-copywrite {
-  padding-bottom: 4em;
+  /* padding-bottom: 4em; */
 }
 .page-content {
-  padding-bottom: 4em;
+  /* padding-bottom: 4em; */
 }
 .underline-title {
   font-weight: bold;
@@ -97,7 +102,7 @@ h5 {
 }
 
 .splash-zone {
-  padding: 0 0 60px 0;
+  /* padding: 0 0 60px 0; */
 }
 
 .splash-full-image {
@@ -118,7 +123,7 @@ h5 {
 }
 
 .menu-bar {
-  padding: 0 0 2em 0;
+  /* padding: 0 0 2em 0; */
   /*margin: 0px 0px -20px 0px;*/
 
 }
@@ -178,7 +183,7 @@ h5 {
   padding-bottom: 1em;
 }
 .inner-sponsor-tab-footer{
-  padding-top:1em;
+  /* padding-top:1em; */
   /*margin-left: 3em;*/
 /*  border-style: solid;*/
 /*  border-right: 1px;*/
@@ -195,13 +200,13 @@ h5 {
 }
 
 
-.margin-left {
+/* .margin-left {
   padding: 0 0 0 100px;
 }
 
 .margin-right {
   padding: 0 100px 0 0;
-}
+} */
 
 .v-separator
 {
@@ -218,8 +223,8 @@ h5 {
 }
 
 .sponsors {
-  padding-top:0px;
-  padding-left:0px;
+  /* padding-top:0px; */
+  /* padding-left:0px; */
 }
 .sponsor-tab-footer .vertical-splitter {
   border-left: thick solid #ff0000;
@@ -259,7 +264,7 @@ h5 {
 }
 
 .main-sponsors {
-  padding-top: 1em;
+  /* padding-top: 1em; */
   font-size: 18px;
   color: #E05113;
   /*height:px;*/
