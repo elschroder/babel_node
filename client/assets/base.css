@@ -45,12 +45,12 @@ h5 {
 .all-content {
   margin-bottom: 1.5rem;
 }
-.page-copywrite {
-  /* padding-bottom: 4em; */
-}
+
 .page-content {
   /* padding-bottom: 4em; */
   margin-bottom: 1.5rem;
+  padding-left: 0;
+
 }
 .underline-title {
   font-weight: bold;

@@ -1,40 +1,35 @@
 <title>Contacto</title>
-<div class="large-12 column">
-  <div class="medium-12 large-12 row splash-zone">
-    <div>
-      {{#if locals.is_desktop}}
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2993.868850466468!2d2.1714860735505366!3d41.376934037373736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2607f2835a3%3A0xf068fff3102e74b5!2sCarrer+dels+Salvador%2C+4%2C+08001+Barcelona%2C+Spain!5e0!3m2!1sen!2sus!4v1496077227894" width="1030" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-      {{/if}}
-    </div>
+<div class="small-12 column splash-zone">
+  <div>
+    {{#if locals.is_desktop}}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2993.868850466468!2d2.1714860735505366!3d41.376934037373736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2607f2835a3%3A0xf068fff3102e74b5!2sCarrer+dels+Salvador%2C+4%2C+08001+Barcelona%2C+Spain!5e0!3m2!1sen!2sus!4v1496077227894" width="1030" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    {{/if}}
   </div>
-  <div class="large-12 row page-content">
-    <div class="small-12 medium-9 large-9 column page-copywrite">
-      <div class="large-5 columns page-copywrite">
-        <h4>DIRECCIÓN: </h4>
-        <address>
-          Carrer dels Salvador 4, 4º<br>
-          08001 Barcelona<br>
-          <div>Estación de Metro:</div>
-          Sant Antoni (L2)
-        </address>
-        <br>
-        <address>
-          <h4>Horario:</h4>Lunes: 10-14h, 15-19h. Martes a Jueves: 10-14h.
-          <br> Horario de atenciones, toda la semana con cita previa.
-        </address>
-      </div>
-      <div class="large-4 columns page-copywrite">
-        <h4>Teléfonos:</h4>
-        <address>
-        93 295 57 93 <br>
-        629 577 430
-        </address>
-        <h4>E-mail:</h4>
-        <address>info@babelpuntodeencuentro.org</address>
-      </div>
-    </div>
-    {{> common/side-menu}}
-  </div>
-  {{> es/common/otros_proyectos}}
-
 </div>
+<div class="small-12 medium-12 large-9 column page-content">
+  <div class="large-7 column page-content">
+    <h4>DIRECCIÓN: </h4>
+    <address>
+      Carrer dels Salvador 4, 4º<br>
+      08001 Barcelona<br>
+      <div>Estación de Metro:</div>
+      Sant Antoni (L2)
+    </address>
+    <br>
+    <address>
+      <h4>Horario:</h4>Lunes: 10-14h, 15-19h. Martes a Jueves: 10-14h.
+      <br> Horario de atenciones, toda la semana con cita previa.
+    </address>
+  </div>
+  <div class="large-5 column">
+    <h4>Teléfonos:</h4>
+    <address>
+    93 295 57 93 <br>
+    629 577 430
+    </address>
+    <h4>E-mail:</h4>
+    <address>info@babelpuntodeencuentro.org</address>
+  </div>
+</div>
+{{> common/side-menu}}
+{{> es/common/otros_proyectos}}
