@@ -1,13 +1,18 @@
-.column div {
+/* .column div {
   border: 1px solid green;
 }
 
 .row div  {
   border: 1px solid purple;
-}
+} */
 
 html {
   font-family: 'Roboto', sans-serif;
+}
+
+.splash-zone p {
+  color: #E05113;
+  font-size: 36px;
 }
 
 .webpage {
@@ -23,21 +28,17 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-h3 {
-  color: #E05113;
-  font-size: 36px;
-}
-
-h4 {
+h1 {
   font-weight: bold;
   font-size: 21px;
   color: #4C4C4C;
 }
 
-h5 {
+.bold-paragraph {
   font-weight: bold;
   font-size: 16px;
   color: #4C4C4C;
+  margin-bottom: 1.5rem;
 }
 
 
@@ -242,7 +243,7 @@ h5 {
   /*margin: 20px 0px 0px 0px;*/
 
 }
-.main-sponsors h3{
+.main-sponsors .sponsors-title {
   font-weight: bold;
   font-size: 28px;
   margin: 0px 0px 20px 0px;
