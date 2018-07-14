@@ -18,12 +18,12 @@
 }
 */
 .menu .sub-menu {
-  min-width: 300px;
+  /* min-width: 300px; */
 /*  margin: 30px;*/
 }
 .menu .sub-menu li {
     background:#E05113;
-    margin:0px;
+    /* margin:0px; */
 }
 
 .menu a{
@@ -31,14 +31,14 @@
 }
 
 .menu .sub-menu {
-  transform:translateX(-50.5%);
+  /* transform:translateX(-50.5%); */
 
 }
 
 .menu .sub-menu a {
 
-  min-width: 180px;
-  padding: 1em;
+  /* min-width: 180px; */
+  /* padding: 1em; */
 /*  float:left;*/
 /*  min-height: 20px;*/
 }
@@ -50,5 +50,5 @@
 /*remove arrow from menu*/
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   border-width: 0px;
-
+  
 }

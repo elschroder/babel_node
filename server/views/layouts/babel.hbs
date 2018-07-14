@@ -28,19 +28,17 @@
     </div>
   </header>
   <body>
-    <div class="column webpage">
-        <div class="row">
-          <div class="large-12 column menu-bar">
-            <div class="medium-12 large-3 column">
-              <a href="/">
-                <img class='main-logo img-responsive' src=/assets/logo-bpde.svg>
-              </a>
-            </div>
-            <div class="medium-12 large-9 column">
-              {{> common/navigation_bar}}
-            </div>
-          </div>
+    <div class="colucmn webpage">
+      <div class="large-12 row menu-bar">
+        <div class="small-12 large-3 column">
+          <a href="/">
+            <img class='main-logo img-responsive' src=/assets/logo-bpde.svg>
+          </a>
         </div>
+        <div class="small-12 large-9 column">
+          {{> common/navigation_bar}}
+        </div>
+      </div>
         <div class="large-12 row all-content">
           {{{body}}}
         </div>
@@ -219,5 +217,9 @@
 </script>
 
 <script type="text/javascript" src="/assets/jquery.min.js"></script>
-<script type="text/javascript" src="/assets/foundation.min.js"></script>
+<!-- <script type="text/javascript" src="/assets/foundation.min.js"></script> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.accordionMenu.js"></script>
+
 <script>$(document).foundation();</script>
