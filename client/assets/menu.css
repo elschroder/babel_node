@@ -59,7 +59,6 @@
 }
 
 /*remove arrow from menu*/
-.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
-  border-width: 0px;
-
+.dropdown.menu.large-horizontal>li.is-dropdown-submenu-parent>a:after {
+  display: none;
 }
