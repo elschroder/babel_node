@@ -14,7 +14,6 @@ const Moment = require('moment-timezone');
 const setTitle = function (post) {
   if ((post.type === 'photo') || (post.type === 'video')) { // if a post is of the type photo we need to create a title.
     let { caption } = post;
-    // console.log "===== setTitle ", post.caption
     caption = caption.replace(/\n/g, ' ');
     caption = caption.replace(/\s\s+/g, ' '); // removes any extra space
     const splitCaption = /\<h2\>(.*?)\<\/h2\>/i.exec(caption);

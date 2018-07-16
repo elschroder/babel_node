@@ -4,7 +4,7 @@ const device = require('express-device');
 const favicon = require('serve-favicon');
 const compression = require('compression');
 const config = require('config');
-const deviceHelpers = require('./helpers/device-helpers');
+// const deviceHelpers = require('./helpers/device-helpers');
 
 const app = express();
 
@@ -23,8 +23,7 @@ app.engine('.hbs', exphbsConf.engine);
 app.set('views', `${__dirname}/views/`);
 app.set('view engine', '.hbs');
 
-app.use(device.capture()); // describes waht type of device the user is using: Desktop/mobile/tablet/etc
-deviceHelpers(app);
+// app.use(device.capture()); // describes waht type of device the user is using: Desktop/mobile/tablet/etc
 
 
 app.use('/assets', express.static('client/assets', { maxAge: 31536000 * 1000 })); // #cache for 1 year
