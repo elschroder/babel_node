@@ -16,6 +16,12 @@ html {
 .splash-zone p {
   color: #E05113;
   font-size: 36px;
+
+}
+@media only screen and (max-width: 700px) {
+  .splash-zone p {
+    font-size: 22px;
+  }
 }
 
 .webpage {

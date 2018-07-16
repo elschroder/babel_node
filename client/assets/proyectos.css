@@ -125,8 +125,8 @@
 .project-item  {
   /*padding: 4em 5px 5px 5px;*/
   margin-bottom: 10px;
-  width: 358px;
-  min-height: 350px;
+  max-width: 320px;
+  /* min-height: 350px; */
   /*border: 1px;*/
   /*border-style: solid;*/
   box-shadow: 2px 2px 5px #888888;
