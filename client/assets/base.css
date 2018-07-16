@@ -346,3 +346,10 @@ h1 {
   /* flex-wrap: nowrap; */
   /* flex-direction: row; */
 }
+
+
+.button img {
+  width: 18px;
+  margin-top: -5px;
+  margin-right: 5px;
+}
