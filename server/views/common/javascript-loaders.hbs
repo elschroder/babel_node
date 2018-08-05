@@ -1,0 +1,61 @@
+<script type="text/javascript" >
+  function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i <ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+          }
+      }
+      return null;
+  }
+
+  function checkAcceptedCookies() {
+    // console.log("checkAcceptedCookies");
+    // console.log(getCookie('acceptedCookies'));
+    if (!getCookie('acceptedCookies'))
+    {
+      setVisibleCookieBanner();
+    }
+  }
+
+  function acceptCookies() {
+    setCookie("acceptedCookies", true, 365);
+    setHiddenCookieBanner();
+  }
+
+  function setVisibleCookieBanner() {
+    // console.log("setVisibleCookieBanner");
+    var x = document.getElementById("CookieAlert");
+    x.style.visibility = "visible";
+  }
+
+  function setHiddenCookieBanner() {
+    // console.log("setHiddenCookieBanner");
+
+    var x = document.getElementById("CookieAlert");
+    x.style.visibility = "hidden";
+  }
+
+  checkAcceptedCookies();
+</script>
+
+<script type="text/javascript" src="/assets/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="/assets/foundation.min.js"></script> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.accordionMenu.js"></script>
+
+<script>$(document).foundation();</script>
