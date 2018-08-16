@@ -5,7 +5,7 @@
       <div class='img-div'>
         {{#each photos}}
         <div>
-          <a href="{{original_size.url}}"target='_blank'>
+          <a href="{{original_size.url}}" target='_blank' rel='noopener'>
             <img class='img-responsive' src={{picked_size.url}}>
           </a>
         </div>
@@ -64,7 +64,7 @@
         <div class='img-div'>
           {{#each photos}}
           <div>
-            <a href="{{original_size.url}}"target='_blank'>
+            <a href="{{original_size.url}}"target='_blank' rel='noopener'>
               <img class='img-responsive' src={{picked_size.url}}>
             </a>
           </div>
@@ -72,7 +72,7 @@
         </div>
         <div></div>
         <div class="description-photos">
-          <h5><a href={{url}} target='_blank'>{{title}}</a></h5>
+          <h5><a href={{url}} target='_blank' rel='noopener'>{{title}}</a></h5>
           <div><em>{{date}}</em></div>
           <div>{{excerpt}}</div>
         </div>
