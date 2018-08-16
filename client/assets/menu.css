@@ -58,7 +58,16 @@
 
 }
 
-/*remove arrow from menu*/
+/* Menu remove arrow */
 .dropdown.menu.large-horizontal>li.is-dropdown-submenu-parent>a:after {
   display: none;
+}
+
+/* Menu colour transitions on hovering  */
+li.is-dropdown-submenu-parent a:hover {
+  color: #E05113;opacity:0.6;
+}
+
+li.is-submenu-item a:hover {
+  color: white;opacity:0.6;
 }
