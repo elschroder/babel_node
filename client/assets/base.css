@@ -88,17 +88,42 @@ h1 {
   padding-left: 0;
 }
 
-.splash-full-image {
-  max-height: 400px;
-  /*min-height: 400px;*/
-/*  min-height: 10%;*/
+
+.splash-full-image  img {
   max-width: 100%;
   overflow: hidden;
-
 }
 
-#splash-estrutura {
-  transform:translateY(-33.5%);
+@media only screen and (max-width: 700px) {
+  .splash-full-image {
+    /* height: 100%; */
+    /* width: 100% */
+  }
+}
+
+
+
+@media only screen and (min-width: 700px) {
+  .splash-full-image  {
+    max-height: 400px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #splash-estrutura {
+    transform:translateY(-33.5%);
+  }
+  #splash-casa-acogida {
+    transform:translateY(-15.5%);
+  }
+
+  #splash-artifex {
+    transform:translateY(-20.5%);
+  }
+  #splash-puentes {
+    transform:translateY(-35.5%);
+    /*transform: scale(0.9);*/
+  }
 }
 
 .summaries {
