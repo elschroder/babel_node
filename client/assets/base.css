@@ -122,7 +122,23 @@ h1 {
   }
   #splash-puentes {
     transform:translateY(-35.5%);
-    /*transform: scale(0.9);*/
+  }
+  #splash-transparencia {
+    transform:translateY(-10.5%);
+  }
+  #splash-filosofia {
+    transform:translateY(-10.5%);
+  }
+  #splash-boletines {
+    transform:translateY(-40.5%);
+  }
+  #splash-dona {
+  }
+  #splash-memoria-actividades {
+    transform:translateY(-18.5%);
+  }
+  #splash-newsletter {
+    transform:translateY(-40.5%);
   }
 }
 
