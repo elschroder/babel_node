@@ -9,6 +9,12 @@ module.exports = (app) => {
       res.send('User-agent: *\n');
     });
 
+  app.route('/memoria2017')
+    .get((req, res) => {
+      // console.log("redirecting...");
+      res.redirect(301, '/es/memoria_actividades');
+    });
+
   app.route('/')
     .get(contentController.index);
 
