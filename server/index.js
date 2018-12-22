@@ -33,9 +33,15 @@ app.use(favicon(`${process.cwd()}/client/assets/favicon.ico`));
 app.use(compression());
 
 app.use('/:language/', (req, res, next) => {
-  // console.log(`allo/wed langs ${config.allowed_languages}`);
-  // console.log('TODO');
-  if (config.allowed_languages.includes(req.params.language) || req.params.language == 'robots.txt') { next(); } else { res.send(404); }
+  if (config.allowed_languages.includes(req.params.language)) {
+    next();
+  } else if (req.params.language == 'robots.txt' || req.params.language == 'memoria2017' || req.params.language == 'memoria2018') {
+    // console.log('req.params.language', req.params.language);
+    next();
+  } else {
+     // console.log()
+     res.send(404);
+  }
 });
 
 const server = app.listen(port, () => console.log(`App listening on port ${port}!`));
