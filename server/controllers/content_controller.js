@@ -1,28 +1,33 @@
-const {
-  routes, allowedLanguages, layout, tumblr,
-} = require('config');
+const {routes, allowedLanguages, layout, tumblr} = require('config')
 
 module.exports.index = function (req, res) {
-  return res.redirect(302, '/es/home/');
-};
+  const language = req.params.language
+
+  return res.redirect(302, `/${language}/home/`)
+}
 
 module.exports.get = (req, res) => {
-  let status = 404;
-  const language = req.params.language;
+  let status = 404
+  const language = req.params.language
 
   if (allowedLanguages.includes(language)) {
-    let template;
-    const content = req.params.content;
+    let template
+    const content = req.params.content
     const opts = {
-      layout, tumblr_on: tumblr.on, is_mi_grano_de_arena: false, locals: res.locals, ga: null,
-    };
+      layout: `babel_${language}`,
+      tumblr_on: tumblr.on,
+      is_mi_grano_de_arena: false,
+      locals: res.locals,
+      ga: null,
+      language: language
+    }
 
     if (routes[language].includes(content)) {
-      template = `${language}/${content}`;
-      status = 200;
+      template = `${language}/${content}`
+      status = 200
     } else {
-      template = `${language}/error`;
+      template = `${language}/error`
     }
-    res.status(status).render(template, opts);
+    res.status(status).render(template, opts)
   } else { res.send(status); }
-};
+}
