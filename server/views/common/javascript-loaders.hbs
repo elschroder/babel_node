@@ -23,8 +23,6 @@
   }
 
   function checkAcceptedCookies() {
-    // console.log("checkAcceptedCookies");
-    // console.log(getCookie('acceptedCookies'));
     if (!getCookie('acceptedCookies'))
     {
       setVisibleCookieBanner();
@@ -37,14 +35,11 @@
   }
 
   function setVisibleCookieBanner() {
-    // console.log("setVisibleCookieBanner");
     var x = document.getElementById("CookieAlert");
     x.style.visibility = "visible";
   }
 
   function setHiddenCookieBanner() {
-    // console.log("setHiddenCookieBanner");
-
     var x = document.getElementById("CookieAlert");
     x.style.visibility = "hidden";
   }
@@ -53,9 +48,6 @@
 </script>
 
 <script type="text/javascript" src="/assets/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="/assets/foundation.min.js"></script> -->
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/plugins/foundation.accordionMenu.js"></script>
-
 <script>$(document).foundation();</script>

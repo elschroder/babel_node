@@ -1,35 +1,7 @@
 {
-  "cat": [
-    "contacte",
-    "cooperacio_internacional",
-    "error",
-    "immigracio_accio_social",
-    "index",
-    "la_fundacio",
-    "membres_patronat",
-    "memoria_activitats",
-    "menu",
-    "noticies",
-    "noticies_fp",
-    "projectes",
-    "que_pots_fer_tu",
-    "voluntaris"
-  ],
-  "en": [
-    "contact",
-    "error",
-    "foundation",
-    "immigration_social_coop",
-    "index",
-    "international_coop",
-    "menu",
-    "news",
-    "news_fp",
-    "past_activities",
-    "projects",
-    "volunteers",
-    "what_can_you_do",
-    "what_we_do"
+  "fr": [
+    "home",
+    "qui_sommes_nous"
   ],
   "es": [
     "boletines",
@@ -55,13 +27,6 @@
     "proyectos_centro_femenino",
     "proyectos_coaching_social",
     "proyectos_colonias_de_verano",
-    "proyectos_description",
-    "proyectos_description",
-    "proyectos_description",
-    "proyectos_description",
-    "proyectos_description",
-    "proyectos_description",
-    "proyectos_description",
     "proyectos_financiacion_de_microproyectos",
     "proyectos_integracion",
     "que_puedes_hacer_tu",
