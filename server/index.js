@@ -30,7 +30,10 @@ app.use(compression())
 app.use('/:language/', (req, res, next) => {
   if (config.allowedLanguages.includes(req.params.language)) {
     next()
-  } else if (req.params.language == 'robots.txt' || req.params.language == 'memoria2017' || req.params.language == 'memoria2018') {
+  } else if (req.params.language == 'robots.txt') {
+    next()
+  } else if (new RegExp('memoria201[7-9]').test(req.params.language) == true) {
+    // mistake done by the designers that added a non-existent route to the website
     next()
   } else {
     res.send(404)

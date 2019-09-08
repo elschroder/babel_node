@@ -3,21 +3,15 @@ const newsController = require('../controllers/news_controller.js')
 const homeController = require('../controllers/home_controller.js')
 
 module.exports = (app) => {
+
   app.route('/robots.txt')
     .get((req, res) => {
       res.type('text/plain')
       res.send('User-agent: *\n')
     })
 
-  app.route('/memoria2017')
+  app.route('/memoria[0-9]+')
     .get((req, res) => {
-      // console.log("redirecting...")
-      res.redirect(301, '/es/memoria_actividades')
-    })
-
-  app.route('/memoria2018')
-    .get((req, res) => {
-      // console.log("redirecting...")
       res.redirect(301, '/es/memoria_actividades')
     })
 
