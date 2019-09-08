@@ -1,8 +1,7 @@
 const {routes, allowedLanguages, layout, tumblr} = require('config')
 
 module.exports.index = function (req, res) {
-  const language = req.params.language
-
+  const language = req.params.language || 'es' // defaults to /es/
   return res.redirect(302, `/${language}/home/`)
 }
 
