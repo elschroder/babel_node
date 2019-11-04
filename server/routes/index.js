@@ -24,7 +24,10 @@ module.exports = (app) => {
   app.route('/:language/home')
     .get(homeController.index)
 
-  app.route('/:language/noticias/')
+  app.route('/:language/noticias')
+    .get(newsController.index)
+
+  app.route('/:language/nouvelles')
     .get(newsController.index)
 
   app.route('/:language/n/:id')
