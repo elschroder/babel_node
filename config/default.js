@@ -15,7 +15,7 @@ module.exports = {
   },
   news: {
     limit: 3,
-    templates: {'en': 'news','es': 'noticias','cat': 'noticies'},
+    templates: {'fr': 'nouvelles','es': 'noticias','cat': 'noticies'},
     templates_front_page: {'en': 'news_fp','es': 'home','fr': 'home'}
   },
   is_mi_grano_de_arena: process.env.mi_grano_de_arena ? process.env.mi_grano_de_arena === 'true' : false,
